@@ -6,7 +6,7 @@ const MAP_SIZE = Vector2(512,512)
 
 func _ready():
 	generate_world()
-	
+	print('test-yeet')
 func generate_world():
 	var noise = FastNoiseLite.new()
 	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
