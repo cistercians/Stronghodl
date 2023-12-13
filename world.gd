@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var tilemap = $Overworld
 
-const MAP_SIZE = Vector2(256,256)
+const MAP_SIZE = Vector2(512,512)
 
 func _ready():
 	generate_world()
@@ -25,9 +25,9 @@ func generate_world():
 			var a = noise.get_noise_2d(x,y)
 			if a < -0.1:
 				water.append(Vector2(x,y))
-			elif a < 0.4:
+			elif a < 0.5:
 				land.append(Vector2(x,y))
-				if a < 0.2:
+				if a < 0.25:
 					var rand = randf()
 					if rand < 0.618:
 						trees.append(Vector2(x,y))
