@@ -23,11 +23,11 @@ func generate_world():
 	for x in MAP_SIZE.x:
 		for y in MAP_SIZE.y:
 			var a = noise.get_noise_2d(x,y)
-			if a < -0.2:
+			if a < -0.1:
 				water.append(Vector2(x,y))
-			elif a < 0.6:
+			elif a < 0.4:
 				land.append(Vector2(x,y))
-				if a < 0.25:
+				if a < 0.2:
 					var rand = randf()
 					if rand < 0.618:
 						trees.append(Vector2(x,y))
