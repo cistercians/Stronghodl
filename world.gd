@@ -1,6 +1,9 @@
 extends Node2D
 
-@onready var tilemap = $Overworld
+@onready var overworld = $Overworld
+@onready var underworld = $Underworld
+@onready var canvas_layer = $CanvasLayer
+@onready var canvas_modulate = $CanvasModulate
 
 const MAP_SIZE = Vector2(256,256)
 
@@ -36,10 +39,10 @@ func generate_world():
 			if b < -0.1:
 				water.append(Vector2(x,y))
 			else:
-				if a > 0.5:
+				if a > 0.45:
 					mountains.append(Vector2(x,y))
 					var rand = randf()
-					if rand < 0.002:
+					if rand < 0.003:
 						caves.append(Vector2(x,y))
 				elif a > 0.35:
 					rocks.append(Vector2(x,y))
@@ -54,10 +57,12 @@ func generate_world():
 						if rand < 0.618:
 							bushes.append(Vector2(x,y))
 							
-	tilemap.set_cells_terrain_connect(0,land,0,0)
-	tilemap.set_cells_terrain_connect(0,rocks,0,1)
-	tilemap.set_cells_terrain_connect(0,water,0,2)
-	tilemap.set_cells_terrain_connect(0,trees,0,3)
-	tilemap.set_cells_terrain_connect(0,mountains,0,4)
-	tilemap.set_cells_terrain_connect(0,caves,0,5)
-	tilemap.set_cells_terrain_connect(0,bushes,0,6)
+	overworld.set_cells_terrain_connect(0,land,0,0)
+	overworld.set_cells_terrain_connect(0,rocks,0,1)
+	overworld.set_cells_terrain_connect(0,water,0,2)
+	overworld.set_cells_terrain_connect(0,trees,0,3)
+	overworld.set_cells_terrain_connect(0,mountains,0,4)
+	overworld.set_cells_terrain_connect(0,caves,0,5)
+	overworld.set_cells_terrain_connect(0,bushes,0,6)
+	
+	canvas_layer.visible = true
