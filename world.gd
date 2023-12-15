@@ -10,6 +10,9 @@ const MAP_SIZE = Vector2(256,256)
 func _ready():
 	generate_world()
 	print('test-yeet')
+	randomize()
+	BgmPlayer.play_soundtrack(BgmPlayer.THEMES.OVERWORLD_NIGHT)
+	AmbPlayer.play_ambience(AmbPlayer.ENV.FOREST)
 func generate_world():
 	var biome_noise = FastNoiseLite.new()
 	var altitude_noise = FastNoiseLite.new()

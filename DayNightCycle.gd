@@ -32,3 +32,14 @@ func _recalculate_time():
 		if past_hour != hour:
 			past_hour = hour
 			print("time: ", hour, ":", minute)
+			if hour == 5:
+				randomize()
+				BgmPlayer.play_soundtrack(BgmPlayer.THEMES.OVERWORLD_MORNING)
+				AmbPlayer.play_ambience(AmbPlayer.ENV.NATURE)
+			elif hour == 11:
+				randomize()
+				BgmPlayer.play_soundtrack(BgmPlayer.THEMES.OVERWORLD_DAY)
+			elif hour == 19:
+				randomize()
+				BgmPlayer.play_soundtrack(BgmPlayer.THEMES.OVERWORLD_NIGHT)
+				AmbPlayer.play_ambience(AmbPlayer.ENV.FOREST)
