@@ -1,8 +1,9 @@
 extends CanvasModulate
 @export var gradient:GradientTexture1D
-@export var INGAME_SPEED = 20.0
-@export var INITIAL_HOUR = 12
+@export var INGAME_SPEED = 5.0
+@export var INITIAL_HOUR = 0
 var time:float = 0.0
+var past_hour = -1
 var past_minute:float = -1.0
 const MINUTES_PER_DAY = 1440
 const MINUTES_PER_HOUR = 60
@@ -28,4 +29,6 @@ func _recalculate_time():
 	if past_minute != minute:
 		past_minute = minute
 		time_tick.emit(day,hour,minute)
-		print("time: ", hour, ":", minute)
+		if past_hour != hour:
+			past_hour = hour
+			print("time: ", hour, ":", minute)

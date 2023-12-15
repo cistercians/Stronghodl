@@ -32004,7 +32004,7 @@ sources/0 = SubResource("TileSetAtlasSource_rqf22")
 sources/2 = SubResource("TileSetAtlasSource_0c0xl")
 
 [sub_resource type="Gradient" id="Gradient_k1a2d"]
-offsets = PackedFloat32Array(0, 0.267016, 0.462659, 0.596859, 0.681239, 0.851658)
+offsets = PackedFloat32Array(0, 0.320583, 0.462659, 0.613843, 0.704918, 0.851658)
 colors = PackedColorArray(0.121569, 0.113725, 0.388235, 1, 0.121569, 0.113725, 0.388235, 1, 0.338763, 0.332859, 0.539496, 1, 1, 0.629841, 0.205582, 1, 0.997235, 0.861533, 0.521405, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_gpn6w"]
