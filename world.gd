@@ -5,15 +5,30 @@ extends Node2D
 @onready var canvas_layer = $CanvasLayer
 @onready var canvas_modulate = $CanvasModulate
 
-const MAP_SIZE = Vector2(256,256)
+const MAP_SIZE = Vector2(512,512)
+var borders = Rect2(1,1,MAP_SIZE.x-1,MAP_SIZE.y-1)
+
+var land = []
+var trees = []
+var rocks = []
+var water = []
+var mountains = []
+var caves = []
+var bushes = []
+
+var walls = []
+var ground = []
+var ore = []
 
 func _ready():
-	generate_world()
+	generate_overworld()
+	generate_underworld()
 	print('test-yeet')
 	randomize()
 	BgmPlayer.play_soundtrack(BgmPlayer.THEMES.OVERWORLD_NIGHT)
 	AmbPlayer.play_ambience(AmbPlayer.ENV.FOREST)
-func generate_world():
+func generate_overworld():
+	print("Generating overworld...")
 	var biome_noise = FastNoiseLite.new()
 	var altitude_noise = FastNoiseLite.new()
 	biome_noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
@@ -27,14 +42,6 @@ func generate_world():
 	biome_noise.set_fractal_gain(0.5)
 	altitude_noise.set_fractal_gain(0.5)
 	
-	var land = []
-	var trees = []
-	var rocks = []
-	var water = []
-	var mountains = []
-	var caves = []
-	var bushes = []
-	
 	for x in MAP_SIZE.x:
 		for y in MAP_SIZE.y:
 			var b = biome_noise.get_noise_2d(x,y)
@@ -43,21 +50,19 @@ func generate_world():
 				water.append(Vector2(x,y))
 			else:
 				if a > 0.45:
-					mountains.append(Vector2(x,y))
-					var rand = randf()
-					if rand < 0.003:
+					if randf() < 0.004:
 						caves.append(Vector2(x,y))
+					else:
+						mountains.append(Vector2(x,y))
 				elif a > 0.35:
 					rocks.append(Vector2(x,y))
 				else:
 					land.append(Vector2(x,y))
 					if b < 0.3:
-						var rand = randf()
-						if rand < 0.618:
+						if randf() < 0.618:
 							trees.append(Vector2(x,y))
 					elif b < 0.45:
-						var rand = randf()
-						if rand < 0.618:
+						if randf() < 0.618:
 							bushes.append(Vector2(x,y))
 							
 	overworld.set_cells_terrain_connect(0,land,0,0)
@@ -69,3 +74,25 @@ func generate_world():
 	overworld.set_cells_terrain_connect(0,bushes,0,6)
 	
 	canvas_layer.visible = true
+	print("Generated overworld")
+		
+func generate_underworld():
+	print("Generating underworld...")
+	for x in MAP_SIZE.x:
+		for y in MAP_SIZE.y:
+			if randf() > 0.618:
+				ore.append(Vector2(x,y))
+			else:
+				walls.append(Vector2(x,y))
+	for cave in caves:
+		print(cave)
+		var walker = Walker.new(cave, borders)
+		var map = walker.walk(3300)
+		walker.queue_free()
+		for location in map:
+			ground.append(location)
+			
+	underworld.set_cells_terrain_connect(0,walls,0,1)
+	underworld.set_cells_terrain_connect(0,ore,0,2)
+	underworld.set_cells_terrain_connect(0,ground,0,0)
+	print("Generated underworld")
