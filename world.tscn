@@ -32005,7 +32005,6 @@ y_sort_enabled = true
 script = ExtResource("1_1q4vy")
 
 [node name="Overworld" type="TileMap" parent="."]
-visible = false
 y_sort_enabled = true
 tile_set = SubResource("TileSet_qr8mt")
 rendering_quadrant_size = 64
@@ -32023,8 +32022,6 @@ tile_set = SubResource("TileSet_7cs4q")
 rendering_quadrant_size = 64
 format = 2
 layer_0/y_sort_enabled = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.121569, 0.113725, 0.388235, 1)

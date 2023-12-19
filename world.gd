@@ -50,7 +50,7 @@ func generate_overworld():
 				water.append(Vector2(x,y))
 			else:
 				if a > 0.45:
-					if randf() < 0.004:
+					if randf() < 0.003:
 						caves.append(Vector2(x,y))
 					else:
 						mountains.append(Vector2(x,y))
@@ -73,7 +73,6 @@ func generate_overworld():
 	overworld.set_cells_terrain_connect(0,caves,0,5)
 	overworld.set_cells_terrain_connect(0,bushes,0,6)
 	
-	canvas_layer.visible = true
 	print("Generated overworld")
 		
 func generate_underworld():
