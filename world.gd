@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var overworld = $Overworld
 @onready var underworld = $Underworld
-@onready var canvas_layer = $CanvasLayer
 @onready var canvas_modulate = $CanvasModulate
 
 const MAP_SIZE = Vector2(512,512)
@@ -19,6 +18,7 @@ var bushes = []
 var walls = []
 var ground = []
 var ore = []
+var exits = []
 
 func _ready():
 	generate_overworld()
@@ -85,6 +85,7 @@ func generate_underworld():
 				walls.append(Vector2(x,y))
 	for cave in caves:
 		print(cave)
+		exits.append(cave)
 		var walker = Walker.new(cave, borders)
 		var map = walker.walk(3300)
 		walker.queue_free()
@@ -94,4 +95,5 @@ func generate_underworld():
 	underworld.set_cells_terrain_connect(0,walls,0,1)
 	underworld.set_cells_terrain_connect(0,ore,0,2)
 	underworld.set_cells_terrain_connect(0,ground,0,0)
+	underworld.set_cells_terrain_connect(0,exits,0,3)
 	print("Generated underworld")
