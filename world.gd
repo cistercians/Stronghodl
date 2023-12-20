@@ -18,6 +18,7 @@ var bushes = []
 var walls = []
 var ground = []
 var ore = []
+var under_water = []
 var exits = []
 
 func _ready():
@@ -90,10 +91,17 @@ func generate_underworld():
 		var map = walker.walk(3300)
 		walker.queue_free()
 		for location in map:
-			ground.append(location)
+			if water.has(location):
+				if randf() < 0.618:
+					under_water.append(location)
+				else:
+					ground.append(location)
+			else:
+				ground.append(location)
 			
 	underworld.set_cells_terrain_connect(0,walls,0,1)
 	underworld.set_cells_terrain_connect(0,ore,0,2)
 	underworld.set_cells_terrain_connect(0,ground,0,0)
+	underworld.set_cells_terrain_connect(0,under_water,0,4)
 	underworld.set_cells_terrain_connect(0,exits,0,3)
 	print("Generated underworld")

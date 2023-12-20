@@ -9656,6 +9656,13 @@ sources/5 = SubResource("TileSetAtlasSource_x51y6")
 sources/4 = SubResource("TileSetAtlasSource_xxx4e")
 sources/6 = SubResource("TileSetAtlasSource_ghpii")
 
+[sub_resource type="Gradient" id="Gradient_k1a2d"]
+offsets = PackedFloat32Array(0, 0.320583, 0.462659, 0.613843, 0.71949, 0.851658)
+colors = PackedColorArray(0.121569, 0.113725, 0.388235, 1, 0.121569, 0.113725, 0.388235, 1, 0.338763, 0.332859, 0.539496, 1, 1, 0.629841, 0.205582, 1, 0.997235, 0.861533, 0.521405, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gpn6w"]
+gradient = SubResource("Gradient_k1a2d")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rqf22"]
 texture = ExtResource("2_r0pfg")
 margins = Vector2i(0, 20)
@@ -13207,6 +13214,8 @@ texture_region_size = Vector2i(64, 64)
 159:21/0 = 0
 160:21/0 = 0
 0:22/0 = 0
+0:22/0/terrain_set = 0
+0:22/0/terrain = 4
 1:22/0 = 0
 2:22/0 = 0
 3:22/0 = 0
@@ -32307,16 +32316,11 @@ terrain_set_0/terrain_2/name = "Ore"
 terrain_set_0/terrain_2/color = Color(0.113725, 0.101961, 0.0431373, 1)
 terrain_set_0/terrain_3/name = "Exit"
 terrain_set_0/terrain_3/color = Color(0.654902, 0.623529, 0.407843, 1)
+terrain_set_0/terrain_4/name = "Water"
+terrain_set_0/terrain_4/color = Color(0.258824, 0.258824, 0.788235, 1)
 sources/0 = SubResource("TileSetAtlasSource_rqf22")
 sources/2 = SubResource("TileSetAtlasSource_0c0xl")
 sources/1 = SubResource("TileSetAtlasSource_22dvt")
-
-[sub_resource type="Gradient" id="Gradient_k1a2d"]
-offsets = PackedFloat32Array(0, 0.320583, 0.462659, 0.613843, 0.71949, 0.851658)
-colors = PackedColorArray(0.121569, 0.113725, 0.388235, 1, 0.121569, 0.113725, 0.388235, 1, 0.338763, 0.332859, 0.539496, 1, 1, 0.629841, 0.205582, 1, 0.997235, 0.861533, 0.521405, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_gpn6w"]
-gradient = SubResource("Gradient_k1a2d")
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
@@ -32331,6 +32335,11 @@ format = 2
 layer_0/name = "Overworld"
 layer_0/y_sort_enabled = true
 
+[node name="CanvasModulate" type="CanvasModulate" parent="Overworld"]
+color = Color(0.121569, 0.113725, 0.388235, 1)
+script = ExtResource("8_ufwcx")
+gradient = SubResource("GradientTexture1D_gpn6w")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("5_egtnv")
 
@@ -32341,9 +32350,3 @@ tile_set = SubResource("TileSet_7cs4q")
 rendering_quadrant_size = 64
 format = 2
 layer_0/y_sort_enabled = true
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color(0.121569, 0.113725, 0.388235, 1)
-script = ExtResource("8_ufwcx")
-gradient = SubResource("GradientTexture1D_gpn6w")
