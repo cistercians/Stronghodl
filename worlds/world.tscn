@@ -32327,7 +32327,6 @@ y_sort_enabled = true
 script = ExtResource("1_1q4vy")
 
 [node name="Overworld" type="TileMap" parent="."]
-visible = false
 y_sort_enabled = true
 tile_set = SubResource("TileSet_qr8mt")
 rendering_quadrant_size = 64
@@ -32344,9 +32343,14 @@ gradient = SubResource("GradientTexture1D_gpn6w")
 script = ExtResource("5_egtnv")
 
 [node name="Underworld" type="TileMap" parent="."]
+visible = false
 z_index = -1
 y_sort_enabled = true
 tile_set = SubResource("TileSet_7cs4q")
 rendering_quadrant_size = 64
 format = 2
 layer_0/y_sort_enabled = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Underworld"]
+visible = false
+color = Color(0.0392157, 0.0352941, 0.188235, 1)

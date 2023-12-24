@@ -85,14 +85,14 @@ func generate_underworld():
 			else:
 				walls.append(Vector2(x,y))
 	for cave in caves:
-		print(cave)
+		print("cave @ ", cave)
 		exits.append(cave)
 		var walker = Walker.new(cave, borders)
 		var map = walker.walk(3300)
 		walker.queue_free()
 		for location in map:
 			if water.has(location):
-				if randf() < 0.618:
+				if randf() > 0.618:
 					under_water.append(location)
 				else:
 					ground.append(location)
