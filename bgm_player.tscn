@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d4lkyy781ii1l"]
 
-[ext_resource type="Script" path="res://BGM.gd" id="1_u1hkr"]
+[ext_resource type="Script" path="res://Scripts/BGM.gd" id="1_u1hkr"]
 
 [node name="BgmPlayer" type="Node"]
 script = ExtResource("1_u1hkr")
