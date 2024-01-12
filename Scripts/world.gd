@@ -52,7 +52,12 @@ func generate_overworld():
 			else:
 				if a > 0.45:
 					if randf() < 0.003:
-						caves.append(Vector2(x,y))
+						if caves.size() > 0:
+							var lastCave = caves[caves.size()-1]
+							if Vector2(x,y).distance_to(lastCave) > 10:
+								caves.append(Vector2(x,y))
+						else:
+							caves.append(Vector2(x,y))
 					else:
 						mountains.append(Vector2(x,y))
 				elif a > 0.35:
