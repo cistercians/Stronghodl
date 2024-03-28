@@ -51,7 +51,7 @@ func generate_overworld():
 				water.append(Vector2(x,y))
 			else:
 				if a > 0.45:
-					if randf() < 0.003:
+					if randf() < 0.004:
 						if caves.size() > 0:
 							var lastCave = caves[caves.size()-1]
 							if Vector2(x,y).distance_to(lastCave) > 10:
