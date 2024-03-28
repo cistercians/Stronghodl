@@ -36,10 +36,10 @@ func generate_overworld():
 	altitude_noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
 	biome_noise.seed = randi()
 	altitude_noise.seed = randi()
-	biome_noise.set_frequency(0.01)
-	altitude_noise.set_frequency(0.01)
-	biome_noise.set_fractal_lacunarity(2)
-	altitude_noise.set_fractal_lacunarity(2)
+	biome_noise.set_frequency(0.007)
+	altitude_noise.set_frequency(0.03)
+	biome_noise.set_fractal_lacunarity(3)
+	altitude_noise.set_fractal_lacunarity(3)
 	biome_noise.set_fractal_gain(0.5)
 	altitude_noise.set_fractal_gain(0.5)
 	
