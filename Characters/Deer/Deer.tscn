@@ -1,3 +1,993 @@
-[gd_scene format=3 uid="uid://b1vxcloy780yi"]
+[gd_scene load_steps=222 format=3 uid="uid://b1vxcloy780yi"]
+
+[ext_resource type="Texture2D" uid="uid://dd1fasojthbsn" path="res://Characters/Deer/Sprites/Die/Deerdie001.png" id="1_e4f3y"]
+[ext_resource type="Texture2D" uid="uid://cngaijovgyxrn" path="res://Characters/Deer/Sprites/Die/Deerdie002.png" id="2_2gckp"]
+[ext_resource type="Texture2D" uid="uid://2uy545b66qp1" path="res://Characters/Deer/Sprites/Die/Deerdie003.png" id="3_6uane"]
+[ext_resource type="Texture2D" uid="uid://u0eo0ce8cmeq" path="res://Characters/Deer/Sprites/Die/Deerdie004.png" id="4_qvme0"]
+[ext_resource type="Texture2D" uid="uid://boye5drehmbhm" path="res://Characters/Deer/Sprites/Die/Deerdie005.png" id="5_j4r5k"]
+[ext_resource type="Texture2D" uid="uid://gvjrn6wqimlw" path="res://Characters/Deer/Sprites/Die/Deerdie006.png" id="6_5p4lj"]
+[ext_resource type="Texture2D" uid="uid://pprnb60f5qli" path="res://Characters/Deer/Sprites/Die/Deerdie007.png" id="7_te5gt"]
+[ext_resource type="Texture2D" uid="uid://dmnpashxjj73q" path="res://Characters/Deer/Sprites/Die/Deerdie008.png" id="8_plekd"]
+[ext_resource type="Texture2D" uid="uid://buqs5rcs2kpnk" path="res://Characters/Deer/Sprites/Die/Deerdie009.png" id="9_fws2k"]
+[ext_resource type="Texture2D" uid="uid://bbg8ojtnbqc1j" path="res://Characters/Deer/Sprites/Die/Deerdie010.png" id="10_hkp0b"]
+[ext_resource type="Texture2D" uid="uid://heg81a3nui56" path="res://Characters/Deer/Sprites/Die/Deerdie011.png" id="11_3dx16"]
+[ext_resource type="Texture2D" uid="uid://c1h34fbcwlbvg" path="res://Characters/Deer/Sprites/Die/Deerdie012.png" id="12_3l66g"]
+[ext_resource type="Texture2D" uid="uid://dcqcoclflow3n" path="res://Characters/Deer/Sprites/Die/Deerdie013.png" id="13_ajhd0"]
+[ext_resource type="Texture2D" uid="uid://dkelsdor4wuss" path="res://Characters/Deer/Sprites/Die/Deerdie014.png" id="14_5x0ee"]
+[ext_resource type="Texture2D" uid="uid://vifrb4fyhi11" path="res://Characters/Deer/Sprites/Die/Deerdie015.png" id="15_vmni7"]
+[ext_resource type="Texture2D" uid="uid://bubw48k014ax0" path="res://Characters/Deer/Sprites/Die/Deerdie016.png" id="16_e51w3"]
+[ext_resource type="Texture2D" uid="uid://32my5kd3xbu4" path="res://Characters/Deer/Sprites/Die/Deerdie017.png" id="17_ldia0"]
+[ext_resource type="Texture2D" uid="uid://fk8xut4onque" path="res://Characters/Deer/Sprites/Die/Deerdie018.png" id="18_n4ggw"]
+[ext_resource type="Texture2D" uid="uid://qawt2pfjojyo" path="res://Characters/Deer/Sprites/Die/Deerdie019.png" id="19_vf441"]
+[ext_resource type="Texture2D" uid="uid://dvv7q3cttwkql" path="res://Characters/Deer/Sprites/Die/Deerdie020.png" id="20_gd4e2"]
+[ext_resource type="Texture2D" uid="uid://ci22gljhdbo6k" path="res://Characters/Deer/Sprites/Die/Deerdie021.png" id="21_1xfib"]
+[ext_resource type="Texture2D" uid="uid://bkrn5wnbbxyyb" path="res://Characters/Deer/Sprites/Die/Deerdie022.png" id="22_mfe47"]
+[ext_resource type="Texture2D" uid="uid://cx752r4s8i0nc" path="res://Characters/Deer/Sprites/Die/Deerdie023.png" id="23_arjio"]
+[ext_resource type="Texture2D" uid="uid://dqkjig6a3qwj" path="res://Characters/Deer/Sprites/Die/Deerdie024.png" id="24_3wxun"]
+[ext_resource type="Texture2D" uid="uid://cmd7ujxe1hxd8" path="res://Characters/Deer/Sprites/Die/Deerdie025.png" id="25_eqog6"]
+[ext_resource type="Texture2D" uid="uid://dpo7cy2o7ses8" path="res://Characters/Deer/Sprites/Die/Deerdie026.png" id="26_mtqi5"]
+[ext_resource type="Texture2D" uid="uid://3bwk3ryrv354" path="res://Characters/Deer/Sprites/Die/Deerdie027.png" id="27_ctqdq"]
+[ext_resource type="Texture2D" uid="uid://da8x0sd4vtx4o" path="res://Characters/Deer/Sprites/Die/Deerdie028.png" id="28_a6v4b"]
+[ext_resource type="Texture2D" uid="uid://bkln6fa88rti4" path="res://Characters/Deer/Sprites/Die/Deerdie029.png" id="29_fnr2q"]
+[ext_resource type="Texture2D" uid="uid://8n8pf4ooejrn" path="res://Characters/Deer/Sprites/Die/Deerdie030.png" id="30_wmop3"]
+[ext_resource type="Texture2D" uid="uid://evtj6jrkyuwb" path="res://Characters/Deer/Sprites/Die/Deerdie031.png" id="31_wfsry"]
+[ext_resource type="Texture2D" uid="uid://3mbf0uhclyxe" path="res://Characters/Deer/Sprites/Die/Deerdie032.png" id="32_fkl1e"]
+[ext_resource type="Texture2D" uid="uid://bv50t2biua348" path="res://Characters/Deer/Sprites/Die/Deerdie033.png" id="33_q547u"]
+[ext_resource type="Texture2D" uid="uid://bh8fixik7726o" path="res://Characters/Deer/Sprites/Die/Deerdie034.png" id="34_xl42b"]
+[ext_resource type="Texture2D" uid="uid://be03audm72fxq" path="res://Characters/Deer/Sprites/Die/Deerdie035.png" id="35_qtb0g"]
+[ext_resource type="Texture2D" uid="uid://coj3p5rgrn3jt" path="res://Characters/Deer/Sprites/Die/Deerdie036.png" id="36_r4i4l"]
+[ext_resource type="Texture2D" uid="uid://bvyti11bysjnk" path="res://Characters/Deer/Sprites/Die/Deerdie037.png" id="37_pqalq"]
+[ext_resource type="Texture2D" uid="uid://da21hf0wrh74c" path="res://Characters/Deer/Sprites/Die/Deerdie038.png" id="38_m4258"]
+[ext_resource type="Texture2D" uid="uid://21cbn43q1bdj" path="res://Characters/Deer/Sprites/Die/Deerdie039.png" id="39_u20yf"]
+[ext_resource type="Texture2D" uid="uid://bvy1hhac3lcmo" path="res://Characters/Deer/Sprites/Die/Deerdie040.png" id="40_v74dx"]
+[ext_resource type="Texture2D" uid="uid://dxbv2ubpyqn8s" path="res://Characters/Deer/Sprites/Die/Deerdie041.png" id="41_avrps"]
+[ext_resource type="Texture2D" uid="uid://bnrujemumdoom" path="res://Characters/Deer/Sprites/Die/Deerdie042.png" id="42_6fs5c"]
+[ext_resource type="Texture2D" uid="uid://ci6tpbo74hdil" path="res://Characters/Deer/Sprites/Die/Deerdie057.png" id="43_ucsyk"]
+[ext_resource type="Texture2D" uid="uid://b55a0ovwrd7f4" path="res://Characters/Deer/Sprites/Die/Deerdie058.png" id="44_a3y8g"]
+[ext_resource type="Texture2D" uid="uid://71s237xok02m" path="res://Characters/Deer/Sprites/Die/Deerdie059.png" id="45_cny8h"]
+[ext_resource type="Texture2D" uid="uid://bxafsqwamp1nt" path="res://Characters/Deer/Sprites/Die/Deerdie060.png" id="46_x7mrn"]
+[ext_resource type="Texture2D" uid="uid://e1ab1h1ecu0q" path="res://Characters/Deer/Sprites/Die/Deerdie061.png" id="47_y1g66"]
+[ext_resource type="Texture2D" uid="uid://c8i6uusnxo6hj" path="res://Characters/Deer/Sprites/Die/Deerdie062.png" id="48_3vbkm"]
+[ext_resource type="Texture2D" uid="uid://cfsyhe864xxua" path="res://Characters/Deer/Sprites/Die/Deerdie063.png" id="49_wive4"]
+[ext_resource type="Texture2D" uid="uid://ds6ojjyre13d1" path="res://Characters/Deer/Sprites/Die/Deerdie064.png" id="50_8bxn5"]
+[ext_resource type="Texture2D" uid="uid://vfaw4ntilbk6" path="res://Characters/Deer/Sprites/Die/Deerdie065.png" id="51_08oyq"]
+[ext_resource type="Texture2D" uid="uid://b43vdypbmvd72" path="res://Characters/Deer/Sprites/Die/Deerdie066.png" id="52_tjurj"]
+[ext_resource type="Texture2D" uid="uid://dtewa3beggojl" path="res://Characters/Deer/Sprites/Die/Deerdie067.png" id="53_24jmd"]
+[ext_resource type="Texture2D" uid="uid://dqi3wpohilkji" path="res://Characters/Deer/Sprites/Die/Deerdie068.png" id="54_sio83"]
+[ext_resource type="Texture2D" uid="uid://cvscymw636evh" path="res://Characters/Deer/Sprites/Die/Deerdie069.png" id="55_coswi"]
+[ext_resource type="Texture2D" uid="uid://cgrhxop1oaeoe" path="res://Characters/Deer/Sprites/Die/Deerdie070.png" id="56_42y7f"]
+[ext_resource type="Texture2D" uid="uid://caerd57ryti8j" path="res://Characters/Deer/Sprites/Die/Deerdie043.png" id="57_qvnxi"]
+[ext_resource type="Texture2D" uid="uid://b1evj3o2ik8f2" path="res://Characters/Deer/Sprites/Die/Deerdie044.png" id="58_rp7cu"]
+[ext_resource type="Texture2D" uid="uid://cwi5gpgbc12vl" path="res://Characters/Deer/Sprites/Die/Deerdie045.png" id="59_37kql"]
+[ext_resource type="Texture2D" uid="uid://boow362clrs3f" path="res://Characters/Deer/Sprites/Die/Deerdie046.png" id="60_d5y0n"]
+[ext_resource type="Texture2D" uid="uid://disyqe1yfqwgk" path="res://Characters/Deer/Sprites/Die/Deerdie047.png" id="61_le2xj"]
+[ext_resource type="Texture2D" uid="uid://1kdr0lnvtu2t" path="res://Characters/Deer/Sprites/Die/Deerdie048.png" id="62_cfdot"]
+[ext_resource type="Texture2D" uid="uid://bhgicjqk2k2n4" path="res://Characters/Deer/Sprites/Die/Deerdie049.png" id="63_uvxxj"]
+[ext_resource type="Texture2D" uid="uid://c10xh8ae5sbfp" path="res://Characters/Deer/Sprites/Die/Deerdie050.png" id="64_1w1lg"]
+[ext_resource type="Texture2D" uid="uid://c8g2be20eld0c" path="res://Characters/Deer/Sprites/Die/Deerdie051.png" id="65_us125"]
+[ext_resource type="Texture2D" uid="uid://cru2x8pycdcek" path="res://Characters/Deer/Sprites/Die/Deerdie052.png" id="66_hd6p6"]
+[ext_resource type="Texture2D" uid="uid://cc2ciqjwkeq1p" path="res://Characters/Deer/Sprites/Die/Deerdie053.png" id="67_kvsp0"]
+[ext_resource type="Texture2D" uid="uid://bmdgd00i0mg3x" path="res://Characters/Deer/Sprites/Die/Deerdie054.png" id="68_dkl75"]
+[ext_resource type="Texture2D" uid="uid://bj525yjtavlgt" path="res://Characters/Deer/Sprites/Die/Deerdie055.png" id="69_n3gna"]
+[ext_resource type="Texture2D" uid="uid://65eqq3k5ske1" path="res://Characters/Deer/Sprites/Die/Deerdie056.png" id="70_xvd7t"]
+[ext_resource type="Texture2D" uid="uid://bb0ri4bp5gqq3" path="res://Characters/Deer/Sprites/Run/Deerrun001.png" id="71_0d001"]
+[ext_resource type="Texture2D" uid="uid://dclaih68a2v4m" path="res://Characters/Deer/Sprites/Run/Deerrun002.png" id="72_upyw3"]
+[ext_resource type="Texture2D" uid="uid://rmp441k55q87" path="res://Characters/Deer/Sprites/Run/Deerrun003.png" id="73_pcuef"]
+[ext_resource type="Texture2D" uid="uid://btac2xu12s2tc" path="res://Characters/Deer/Sprites/Run/Deerrun004.png" id="74_2uqpj"]
+[ext_resource type="Texture2D" uid="uid://c35cj2eiae82t" path="res://Characters/Deer/Sprites/Run/Deerrun005.png" id="75_xlm83"]
+[ext_resource type="Texture2D" uid="uid://c5t27bc01qbft" path="res://Characters/Deer/Sprites/Run/Deerrun006.png" id="76_e5rmu"]
+[ext_resource type="Texture2D" uid="uid://pxfjxlyi3wre" path="res://Characters/Deer/Sprites/Run/Deerrun007.png" id="77_a5oac"]
+[ext_resource type="Texture2D" uid="uid://d2ecaqbao21r4" path="res://Characters/Deer/Sprites/Run/Deerrun008.png" id="78_485wu"]
+[ext_resource type="Texture2D" uid="uid://doslvjnxuvffn" path="res://Characters/Deer/Sprites/Run/Deerrun009.png" id="79_c7hrq"]
+[ext_resource type="Texture2D" uid="uid://cifrkswfqn1gu" path="res://Characters/Deer/Sprites/Run/Deerrun010.png" id="80_6lmdf"]
+[ext_resource type="Texture2D" uid="uid://dnv2lap48p8qg" path="res://Characters/Deer/Sprites/Run/Deerrun011.png" id="81_i58pr"]
+[ext_resource type="Texture2D" uid="uid://ctpb8kwrviuiq" path="res://Characters/Deer/Sprites/Run/Deerrun012.png" id="82_o2gr1"]
+[ext_resource type="Texture2D" uid="uid://bhhh28dwbrxvs" path="res://Characters/Deer/Sprites/Run/Deerrun013.png" id="83_0uqh8"]
+[ext_resource type="Texture2D" uid="uid://cm0tv3gixkhln" path="res://Characters/Deer/Sprites/Run/Deerrun014.png" id="84_vcfda"]
+[ext_resource type="Texture2D" uid="uid://nral4j5iihwm" path="res://Characters/Deer/Sprites/Run/Deerrun015.png" id="85_x51ea"]
+[ext_resource type="Texture2D" uid="uid://c001or1pby1bp" path="res://Characters/Deer/Sprites/Run/Deerrun016.png" id="86_qduk2"]
+[ext_resource type="Texture2D" uid="uid://dtkl8mmfhgpro" path="res://Characters/Deer/Sprites/Run/Deerrun017.png" id="87_aiy0k"]
+[ext_resource type="Texture2D" uid="uid://bwnw8hbmbybet" path="res://Characters/Deer/Sprites/Run/Deerrun018.png" id="88_ln3re"]
+[ext_resource type="Texture2D" uid="uid://crxi1ohnpnp4n" path="res://Characters/Deer/Sprites/Run/Deerrun019.png" id="89_onhd2"]
+[ext_resource type="Texture2D" uid="uid://c5gpqypehc4i" path="res://Characters/Deer/Sprites/Run/Deerrun020.png" id="90_loeg0"]
+[ext_resource type="Texture2D" uid="uid://by1uuu1orubpd" path="res://Characters/Deer/Sprites/Run/Deerrun021.png" id="91_omco5"]
+[ext_resource type="Texture2D" uid="uid://cxv4cvbm6u27f" path="res://Characters/Deer/Sprites/Run/Deerrun022.png" id="92_nrplf"]
+[ext_resource type="Texture2D" uid="uid://dww0i6pbgsyhj" path="res://Characters/Deer/Sprites/Run/Deerrun023.png" id="93_gpg7q"]
+[ext_resource type="Texture2D" uid="uid://oyq4ocwxkny3" path="res://Characters/Deer/Sprites/Run/Deerrun024.png" id="94_1bi8p"]
+[ext_resource type="Texture2D" uid="uid://ce0mw0goyvjyi" path="res://Characters/Deer/Sprites/Run/Deerrun025.png" id="95_x8i8b"]
+[ext_resource type="Texture2D" uid="uid://btmluyyo81ugn" path="res://Characters/Deer/Sprites/Run/Deerrun026.png" id="96_v28la"]
+[ext_resource type="Texture2D" uid="uid://da7yulmhouvxf" path="res://Characters/Deer/Sprites/Run/Deerrun027.png" id="97_xmaem"]
+[ext_resource type="Texture2D" uid="uid://45iia5olj5gp" path="res://Characters/Deer/Sprites/Run/Deerrun028.png" id="98_2tnl8"]
+[ext_resource type="Texture2D" uid="uid://cl3o5un7nvwhs" path="res://Characters/Deer/Sprites/Run/Deerrun029.png" id="99_tbnd4"]
+[ext_resource type="Texture2D" uid="uid://7v0do0ofphym" path="res://Characters/Deer/Sprites/Run/Deerrun030.png" id="100_k6wbu"]
+[ext_resource type="Texture2D" uid="uid://cg5buqxvpbxfy" path="res://Characters/Deer/Sprites/Run/Deerrun041.png" id="101_qa51j"]
+[ext_resource type="Texture2D" uid="uid://c28a5kuxcl6h5" path="res://Characters/Deer/Sprites/Run/Deerrun042.png" id="102_mvbhr"]
+[ext_resource type="Texture2D" uid="uid://bwu6rlfsmqexs" path="res://Characters/Deer/Sprites/Run/Deerrun043.png" id="103_hnrlg"]
+[ext_resource type="Texture2D" uid="uid://dm3u5ugpjbds0" path="res://Characters/Deer/Sprites/Run/Deerrun044.png" id="104_rct2u"]
+[ext_resource type="Texture2D" uid="uid://bmd3kb4v0su43" path="res://Characters/Deer/Sprites/Run/Deerrun045.png" id="105_qphr8"]
+[ext_resource type="Texture2D" uid="uid://o8h0v4i1430u" path="res://Characters/Deer/Sprites/Run/Deerrun046.png" id="106_xf32x"]
+[ext_resource type="Texture2D" uid="uid://co62p1sfapoju" path="res://Characters/Deer/Sprites/Run/Deerrun047.png" id="107_jbfjx"]
+[ext_resource type="Texture2D" uid="uid://j3m3rlms6bfr" path="res://Characters/Deer/Sprites/Run/Deerrun048.png" id="108_vta66"]
+[ext_resource type="Texture2D" uid="uid://dtrh14qeyaf1w" path="res://Characters/Deer/Sprites/Run/Deerrun049.png" id="109_csdg3"]
+[ext_resource type="Texture2D" uid="uid://bdlr8igk55gkw" path="res://Characters/Deer/Sprites/Run/Deerrun050.png" id="110_705ya"]
+[ext_resource type="Texture2D" uid="uid://py8lbmi8bepl" path="res://Characters/Deer/Sprites/Run/Deerrun031.png" id="111_553n8"]
+[ext_resource type="Texture2D" uid="uid://bor7r4xcsywth" path="res://Characters/Deer/Sprites/Run/Deerrun032.png" id="112_1bruj"]
+[ext_resource type="Texture2D" uid="uid://wcoyn481x4xt" path="res://Characters/Deer/Sprites/Run/Deerrun033.png" id="113_t63dd"]
+[ext_resource type="Texture2D" uid="uid://di4h5fhxyeb5a" path="res://Characters/Deer/Sprites/Run/Deerrun034.png" id="114_l8pya"]
+[ext_resource type="Texture2D" uid="uid://0aa0ekng4q58" path="res://Characters/Deer/Sprites/Run/Deerrun035.png" id="115_g1lhs"]
+[ext_resource type="Texture2D" uid="uid://biovhqprn4w32" path="res://Characters/Deer/Sprites/Run/Deerrun036.png" id="116_vei5k"]
+[ext_resource type="Texture2D" uid="uid://cqy00aaus3bbg" path="res://Characters/Deer/Sprites/Run/Deerrun037.png" id="117_r6xop"]
+[ext_resource type="Texture2D" uid="uid://cc1bgl4v282gb" path="res://Characters/Deer/Sprites/Run/Deerrun038.png" id="118_1j7g0"]
+[ext_resource type="Texture2D" uid="uid://bj8xnpl0j28pc" path="res://Characters/Deer/Sprites/Run/Deerrun039.png" id="119_msj0r"]
+[ext_resource type="Texture2D" uid="uid://dw36q3iduyk5d" path="res://Characters/Deer/Sprites/Run/Deerrun040.png" id="120_od485"]
+[ext_resource type="Texture2D" uid="uid://d0kwjt2fr0gde" path="res://Characters/Deer/Sprites/Stand/Deerstand001.png" id="121_h4q5r"]
+[ext_resource type="Texture2D" uid="uid://c5fbux5suqth5" path="res://Characters/Deer/Sprites/Stand/Deerstand002.png" id="122_jcona"]
+[ext_resource type="Texture2D" uid="uid://clbwldwmiiki1" path="res://Characters/Deer/Sprites/Stand/Deerstand003.png" id="123_2cl5t"]
+[ext_resource type="Texture2D" uid="uid://dohdo6wna3e2h" path="res://Characters/Deer/Sprites/Stand/Deerstand004.png" id="124_ev31p"]
+[ext_resource type="Texture2D" uid="uid://bcgluwkm4tesk" path="res://Characters/Deer/Sprites/Stand/Deerstand005.png" id="125_1c66p"]
+[ext_resource type="Texture2D" uid="uid://cf1s5gehjbkbg" path="res://Characters/Deer/Sprites/Stand/Deerstand006.png" id="126_vmdhm"]
+[ext_resource type="Texture2D" uid="uid://m2tpc7n50tt7" path="res://Characters/Deer/Sprites/Stand/Deerstand007.png" id="127_vv4wm"]
+[ext_resource type="Texture2D" uid="uid://c0rmll2n0lgwe" path="res://Characters/Deer/Sprites/Stand/Deerstand008.png" id="128_qafbc"]
+[ext_resource type="Texture2D" uid="uid://cj07028q6grpa" path="res://Characters/Deer/Sprites/Stand/Deerstand009.png" id="129_8ywry"]
+[ext_resource type="Texture2D" uid="uid://c0o2o5ue4owt1" path="res://Characters/Deer/Sprites/Stand/Deerstand010.png" id="130_t1yx5"]
+[ext_resource type="Texture2D" uid="uid://rwhq6efoq42d" path="res://Characters/Deer/Sprites/Stand/Deerstand011.png" id="131_f7tgp"]
+[ext_resource type="Texture2D" uid="uid://d33117xwkw4wi" path="res://Characters/Deer/Sprites/Stand/Deerstand012.png" id="132_p87o7"]
+[ext_resource type="Texture2D" uid="uid://odamknmkn5oy" path="res://Characters/Deer/Sprites/Stand/Deerstand013.png" id="133_s7c3g"]
+[ext_resource type="Texture2D" uid="uid://behk2rph2k62m" path="res://Characters/Deer/Sprites/Stand/Deerstand014.png" id="134_fjqa1"]
+[ext_resource type="Texture2D" uid="uid://ca8sq0pv16jgf" path="res://Characters/Deer/Sprites/Stand/Deerstand015.png" id="135_d8y00"]
+[ext_resource type="Texture2D" uid="uid://c6cmm67lcilqq" path="res://Characters/Deer/Sprites/Stand/Deerstand021.png" id="136_j0ke6"]
+[ext_resource type="Texture2D" uid="uid://cl06h61c8e3wh" path="res://Characters/Deer/Sprites/Stand/Deerstand022.png" id="137_db5od"]
+[ext_resource type="Texture2D" uid="uid://d2w1igv0bqmxy" path="res://Characters/Deer/Sprites/Stand/Deerstand023.png" id="138_0lsfy"]
+[ext_resource type="Texture2D" uid="uid://cvnkdbn6caiqh" path="res://Characters/Deer/Sprites/Stand/Deerstand024.png" id="139_le5oa"]
+[ext_resource type="Texture2D" uid="uid://c3y68hkrj2aah" path="res://Characters/Deer/Sprites/Stand/Deerstand025.png" id="140_spn1w"]
+[ext_resource type="Texture2D" uid="uid://bpfjy3ys0g4qy" path="res://Characters/Deer/Sprites/Stand/Deerstand016.png" id="141_cahyy"]
+[ext_resource type="Texture2D" uid="uid://mxkl6v4m3yxy" path="res://Characters/Deer/Sprites/Stand/Deerstand017.png" id="142_son6r"]
+[ext_resource type="Texture2D" uid="uid://dl44xsro5f1hx" path="res://Characters/Deer/Sprites/Stand/Deerstand018.png" id="143_ode5s"]
+[ext_resource type="Texture2D" uid="uid://ck6a4cs0dgmou" path="res://Characters/Deer/Sprites/Stand/Deerstand019.png" id="144_2ka06"]
+[ext_resource type="Texture2D" uid="uid://c2rnm2qi0gryc" path="res://Characters/Deer/Sprites/Stand/Deerstand020.png" id="145_4imi3"]
+[ext_resource type="Texture2D" uid="uid://c4tnjfpdnl3fk" path="res://Characters/Deer/Sprites/Walk/Deerwalk001.png" id="146_ousq7"]
+[ext_resource type="Texture2D" uid="uid://c0xjqiguh8q0l" path="res://Characters/Deer/Sprites/Walk/Deerwalk002.png" id="147_1lgj1"]
+[ext_resource type="Texture2D" uid="uid://btcwys1mpcqij" path="res://Characters/Deer/Sprites/Walk/Deerwalk003.png" id="148_jhj3a"]
+[ext_resource type="Texture2D" uid="uid://0gbywhkajac8" path="res://Characters/Deer/Sprites/Walk/Deerwalk004.png" id="149_5kx1g"]
+[ext_resource type="Texture2D" uid="uid://cywh2bbnbew62" path="res://Characters/Deer/Sprites/Walk/Deerwalk005.png" id="150_cj7rh"]
+[ext_resource type="Texture2D" uid="uid://xtewpkyp5xcm" path="res://Characters/Deer/Sprites/Walk/Deerwalk006.png" id="151_a77ua"]
+[ext_resource type="Texture2D" uid="uid://yvblhph8vtrv" path="res://Characters/Deer/Sprites/Walk/Deerwalk007.png" id="152_8ps26"]
+[ext_resource type="Texture2D" uid="uid://b5h0srydi5wtw" path="res://Characters/Deer/Sprites/Walk/Deerwalk008.png" id="153_d608m"]
+[ext_resource type="Texture2D" uid="uid://cjh8fuwf7nen8" path="res://Characters/Deer/Sprites/Walk/Deerwalk009.png" id="154_fiwm4"]
+[ext_resource type="Texture2D" uid="uid://bd3p5wcylx82o" path="res://Characters/Deer/Sprites/Walk/Deerwalk010.png" id="155_06b3r"]
+[ext_resource type="Texture2D" uid="uid://bwmhqbasookc2" path="res://Characters/Deer/Sprites/Walk/Deerwalk011.png" id="156_4tunp"]
+[ext_resource type="Texture2D" uid="uid://x1gs6f1l4b31" path="res://Characters/Deer/Sprites/Walk/Deerwalk012.png" id="157_rbqg3"]
+[ext_resource type="Texture2D" uid="uid://b3orwt3t0l1sy" path="res://Characters/Deer/Sprites/Walk/Deerwalk013.png" id="158_fi5yc"]
+[ext_resource type="Texture2D" uid="uid://cd34dglotwbtb" path="res://Characters/Deer/Sprites/Walk/Deerwalk014.png" id="159_dki8o"]
+[ext_resource type="Texture2D" uid="uid://dw6063ug4f8fj" path="res://Characters/Deer/Sprites/Walk/Deerwalk015.png" id="160_7ysnb"]
+[ext_resource type="Texture2D" uid="uid://bpu33ql1p1uq1" path="res://Characters/Deer/Sprites/Walk/Deerwalk016.png" id="161_33itj"]
+[ext_resource type="Texture2D" uid="uid://c40hxf2pta8lt" path="res://Characters/Deer/Sprites/Walk/Deerwalk017.png" id="162_rqgo5"]
+[ext_resource type="Texture2D" uid="uid://ditpn8oa71e4r" path="res://Characters/Deer/Sprites/Walk/Deerwalk018.png" id="163_mfy2i"]
+[ext_resource type="Texture2D" uid="uid://cjs0yesq26wbq" path="res://Characters/Deer/Sprites/Walk/Deerwalk019.png" id="164_cwebi"]
+[ext_resource type="Texture2D" uid="uid://bve71yy5vdspa" path="res://Characters/Deer/Sprites/Walk/Deerwalk020.png" id="165_dn50d"]
+[ext_resource type="Texture2D" uid="uid://cmdegadi3xctl" path="res://Characters/Deer/Sprites/Walk/Deerwalk021.png" id="166_xgu7h"]
+[ext_resource type="Texture2D" uid="uid://yxebqrocavrk" path="res://Characters/Deer/Sprites/Walk/Deerwalk022.png" id="167_ev07g"]
+[ext_resource type="Texture2D" uid="uid://cpj1ftdewgyt3" path="res://Characters/Deer/Sprites/Walk/Deerwalk023.png" id="168_nq8od"]
+[ext_resource type="Texture2D" uid="uid://kw5i7rkefoia" path="res://Characters/Deer/Sprites/Walk/Deerwalk024.png" id="169_h0m4b"]
+[ext_resource type="Texture2D" uid="uid://bawdwi3vn6hiy" path="res://Characters/Deer/Sprites/Walk/Deerwalk025.png" id="170_bens4"]
+[ext_resource type="Texture2D" uid="uid://b0geme4lqvtm2" path="res://Characters/Deer/Sprites/Walk/Deerwalk026.png" id="171_435fe"]
+[ext_resource type="Texture2D" uid="uid://c28dewy1gbyfi" path="res://Characters/Deer/Sprites/Walk/Deerwalk027.png" id="172_cjm6n"]
+[ext_resource type="Texture2D" uid="uid://ck8kqohc3672n" path="res://Characters/Deer/Sprites/Walk/Deerwalk028.png" id="173_1pyle"]
+[ext_resource type="Texture2D" uid="uid://ch3mlqyw4ah" path="res://Characters/Deer/Sprites/Walk/Deerwalk029.png" id="174_lcaur"]
+[ext_resource type="Texture2D" uid="uid://n7uj5uvu6o3a" path="res://Characters/Deer/Sprites/Walk/Deerwalk030.png" id="175_cqa0y"]
+[ext_resource type="Texture2D" uid="uid://m2ns7ps1xpda" path="res://Characters/Deer/Sprites/Walk/Deerwalk031.png" id="176_wvnfb"]
+[ext_resource type="Texture2D" uid="uid://m0v10lmay5rw" path="res://Characters/Deer/Sprites/Walk/Deerwalk032.png" id="177_kh2n7"]
+[ext_resource type="Texture2D" uid="uid://ckv0qc62b3i5s" path="res://Characters/Deer/Sprites/Walk/Deerwalk033.png" id="178_yc2oi"]
+[ext_resource type="Texture2D" uid="uid://vy5bfxssk0qi" path="res://Characters/Deer/Sprites/Walk/Deerwalk034.png" id="179_6evv4"]
+[ext_resource type="Texture2D" uid="uid://b4oepyl4jtupl" path="res://Characters/Deer/Sprites/Walk/Deerwalk035.png" id="180_sao67"]
+[ext_resource type="Texture2D" uid="uid://bwmfyml4cl58e" path="res://Characters/Deer/Sprites/Walk/Deerwalk036.png" id="181_qhe0p"]
+[ext_resource type="Texture2D" uid="uid://bblr12jpy3gdc" path="res://Characters/Deer/Sprites/Walk/Deerwalk037.png" id="182_a0pkp"]
+[ext_resource type="Texture2D" uid="uid://bo58r5e5mc76k" path="res://Characters/Deer/Sprites/Walk/Deerwalk038.png" id="183_p1fvu"]
+[ext_resource type="Texture2D" uid="uid://dh8kudyqwp7q7" path="res://Characters/Deer/Sprites/Walk/Deerwalk039.png" id="184_ymxsm"]
+[ext_resource type="Texture2D" uid="uid://bdvjfwv55x7k3" path="res://Characters/Deer/Sprites/Walk/Deerwalk040.png" id="185_uqr1m"]
+[ext_resource type="Texture2D" uid="uid://d3ww6vcwlma5p" path="res://Characters/Deer/Sprites/Walk/Deerwalk041.png" id="186_0x036"]
+[ext_resource type="Texture2D" uid="uid://ccck7jjlih2il" path="res://Characters/Deer/Sprites/Walk/Deerwalk042.png" id="187_nxyid"]
+[ext_resource type="Texture2D" uid="uid://clhehalwqna0b" path="res://Characters/Deer/Sprites/Walk/Deerwalk043.png" id="188_4jn0k"]
+[ext_resource type="Texture2D" uid="uid://kq0rkck8wum4" path="res://Characters/Deer/Sprites/Walk/Deerwalk044.png" id="189_twqkv"]
+[ext_resource type="Texture2D" uid="uid://m4uvi1bib1ar" path="res://Characters/Deer/Sprites/Walk/Deerwalk045.png" id="190_yj5rk"]
+[ext_resource type="Texture2D" uid="uid://cw2pigwc43tf1" path="res://Characters/Deer/Sprites/Walk/Deerwalk061.png" id="191_mv10e"]
+[ext_resource type="Texture2D" uid="uid://clq21p7l6b027" path="res://Characters/Deer/Sprites/Walk/Deerwalk062.png" id="192_nh6yt"]
+[ext_resource type="Texture2D" uid="uid://oem2akel5mhp" path="res://Characters/Deer/Sprites/Walk/Deerwalk063.png" id="193_kwtwq"]
+[ext_resource type="Texture2D" uid="uid://lgtcgruy6nhm" path="res://Characters/Deer/Sprites/Walk/Deerwalk064.png" id="194_tc80h"]
+[ext_resource type="Texture2D" uid="uid://ea886prqu0o4" path="res://Characters/Deer/Sprites/Walk/Deerwalk065.png" id="195_0psp6"]
+[ext_resource type="Texture2D" uid="uid://cydveu8h0ufqf" path="res://Characters/Deer/Sprites/Walk/Deerwalk066.png" id="196_ak2vt"]
+[ext_resource type="Texture2D" uid="uid://di75ix0ljxkjd" path="res://Characters/Deer/Sprites/Walk/Deerwalk067.png" id="197_nb6hj"]
+[ext_resource type="Texture2D" uid="uid://djso8kq11rrdn" path="res://Characters/Deer/Sprites/Walk/Deerwalk068.png" id="198_dxmie"]
+[ext_resource type="Texture2D" uid="uid://25oifguyx1fg" path="res://Characters/Deer/Sprites/Walk/Deerwalk069.png" id="199_1qrkl"]
+[ext_resource type="Texture2D" uid="uid://c2whir8mcpvgk" path="res://Characters/Deer/Sprites/Walk/Deerwalk070.png" id="200_vli3p"]
+[ext_resource type="Texture2D" uid="uid://dmni0nv3l7vjv" path="res://Characters/Deer/Sprites/Walk/Deerwalk071.png" id="201_kcnc2"]
+[ext_resource type="Texture2D" uid="uid://qwa6n70brkll" path="res://Characters/Deer/Sprites/Walk/Deerwalk072.png" id="202_skwvh"]
+[ext_resource type="Texture2D" uid="uid://bbnd23sq2ppjf" path="res://Characters/Deer/Sprites/Walk/Deerwalk073.png" id="203_4cw3y"]
+[ext_resource type="Texture2D" uid="uid://2j21b0xhiuy6" path="res://Characters/Deer/Sprites/Walk/Deerwalk074.png" id="204_6046a"]
+[ext_resource type="Texture2D" uid="uid://byrmqpgr3dppd" path="res://Characters/Deer/Sprites/Walk/Deerwalk075.png" id="205_dk4ai"]
+[ext_resource type="Texture2D" uid="uid://by7gnjsv3kdn8" path="res://Characters/Deer/Sprites/Walk/Deerwalk046.png" id="206_x0nlq"]
+[ext_resource type="Texture2D" uid="uid://d00c5v36uuhrv" path="res://Characters/Deer/Sprites/Walk/Deerwalk047.png" id="207_tw3ag"]
+[ext_resource type="Texture2D" uid="uid://b283jx5lxu3d4" path="res://Characters/Deer/Sprites/Walk/Deerwalk048.png" id="208_bc51n"]
+[ext_resource type="Texture2D" uid="uid://cw8yl5114i88x" path="res://Characters/Deer/Sprites/Walk/Deerwalk049.png" id="209_i3eeo"]
+[ext_resource type="Texture2D" uid="uid://cmil1kxq0fkqk" path="res://Characters/Deer/Sprites/Walk/Deerwalk050.png" id="210_ybp6n"]
+[ext_resource type="Texture2D" uid="uid://gdn1gqmw56ur" path="res://Characters/Deer/Sprites/Walk/Deerwalk051.png" id="211_1ex6l"]
+[ext_resource type="Texture2D" uid="uid://b6oc46q8kf1ph" path="res://Characters/Deer/Sprites/Walk/Deerwalk052.png" id="212_1l8da"]
+[ext_resource type="Texture2D" uid="uid://tl0xr0ovyn1b" path="res://Characters/Deer/Sprites/Walk/Deerwalk053.png" id="213_sgdjx"]
+[ext_resource type="Texture2D" uid="uid://cby2h7ipte0wu" path="res://Characters/Deer/Sprites/Walk/Deerwalk054.png" id="214_qtvp6"]
+[ext_resource type="Texture2D" uid="uid://cic0lsvrdao14" path="res://Characters/Deer/Sprites/Walk/Deerwalk055.png" id="215_enhie"]
+[ext_resource type="Texture2D" uid="uid://ctvtaena3wwr5" path="res://Characters/Deer/Sprites/Walk/Deerwalk056.png" id="216_t5d3k"]
+[ext_resource type="Texture2D" uid="uid://id75tgog36od" path="res://Characters/Deer/Sprites/Walk/Deerwalk057.png" id="217_t0j0c"]
+[ext_resource type="Texture2D" uid="uid://c1nxrlwqfmweg" path="res://Characters/Deer/Sprites/Walk/Deerwalk058.png" id="218_ysdm1"]
+[ext_resource type="Texture2D" uid="uid://cjo4tw7gnhekj" path="res://Characters/Deer/Sprites/Walk/Deerwalk059.png" id="219_4v8lq"]
+[ext_resource type="Texture2D" uid="uid://ce112ru1fba2i" path="res://Characters/Deer/Sprites/Walk/Deerwalk060.png" id="220_hunvj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3stdb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e4f3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2gckp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6uane")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qvme0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j4r5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5p4lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_te5gt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_plekd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fws2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hkp0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3dx16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3l66g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ajhd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5x0ee")
+}],
+"loop": true,
+"name": &"Die_D",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_vmni7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_e51w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ldia0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_n4ggw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vf441")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gd4e2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1xfib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mfe47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_arjio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3wxun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_eqog6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mtqi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ctqdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_a6v4b")
+}],
+"loop": true,
+"name": &"Die_DL",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_fnr2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_wmop3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_wfsry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_fkl1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_q547u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_xl42b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_qtb0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_r4i4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_pqalq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_m4258")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_u20yf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_v74dx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_avrps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_6fs5c")
+}],
+"loop": true,
+"name": &"Die_L",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_ucsyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_a3y8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_cny8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_x7mrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_y1g66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_3vbkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_wive4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_8bxn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_08oyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_tjurj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_24jmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_sio83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_coswi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_42y7f")
+}],
+"loop": true,
+"name": &"Die_U",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_qvnxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_rp7cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_37kql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_d5y0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_le2xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_cfdot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_uvxxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_1w1lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_us125")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_hd6p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_kvsp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_dkl75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_n3gna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_xvd7t")
+}],
+"loop": true,
+"name": &"Die_UL",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("71_0d001")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_upyw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_pcuef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_2uqpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_xlm83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_e5rmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_a5oac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_485wu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_c7hrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_6lmdf")
+}],
+"loop": true,
+"name": &"Run_D",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("81_i58pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_o2gr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_0uqh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_vcfda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_x51ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_qduk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_aiy0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_ln3re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_onhd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_loeg0")
+}],
+"loop": true,
+"name": &"Run_DL",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("91_omco5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_nrplf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_gpg7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_1bi8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_x8i8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_v28la")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_xmaem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_2tnl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_tbnd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_k6wbu")
+}],
+"loop": true,
+"name": &"Run_L",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("101_qa51j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_mvbhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_hnrlg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_rct2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_qphr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_xf32x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_jbfjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_vta66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_csdg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_705ya")
+}],
+"loop": true,
+"name": &"Run_U",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("111_553n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_1bruj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_t63dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_l8pya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_g1lhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_vei5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_r6xop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_1j7g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_msj0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_od485")
+}],
+"loop": true,
+"name": &"Run_UL",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("121_h4q5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_jcona")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_2cl5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_ev31p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_1c66p")
+}],
+"loop": true,
+"name": &"Stand_D",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("126_vmdhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_vv4wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_qafbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_8ywry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_t1yx5")
+}],
+"loop": true,
+"name": &"Stand_DL",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("131_f7tgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_p87o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_s7c3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_fjqa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_d8y00")
+}],
+"loop": true,
+"name": &"Stand_L",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("136_j0ke6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_db5od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_0lsfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_le5oa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_spn1w")
+}],
+"loop": true,
+"name": &"Stand_U",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("141_cahyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_son6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_ode5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_2ka06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_4imi3")
+}],
+"loop": true,
+"name": &"Stand_UL",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("146_ousq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_1lgj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_jhj3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_5kx1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_cj7rh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_a77ua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_8ps26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_d608m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_fiwm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_06b3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_4tunp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_rbqg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_fi5yc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_dki8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_7ysnb")
+}],
+"loop": true,
+"name": &"Walk_D",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("161_33itj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_rqgo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_mfy2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_cwebi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_dn50d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_xgu7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_ev07g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_nq8od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_h0m4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_bens4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_435fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_cjm6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_1pyle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_lcaur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_cqa0y")
+}],
+"loop": true,
+"name": &"Walk_DL",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("176_wvnfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_kh2n7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_yc2oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_6evv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_sao67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_qhe0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_a0pkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_p1fvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_ymxsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_uqr1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_0x036")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_nxyid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_4jn0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_twqkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_yj5rk")
+}],
+"loop": true,
+"name": &"Walk_L",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("191_mv10e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_nh6yt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_kwtwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_tc80h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_0psp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_ak2vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_nb6hj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_dxmie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_1qrkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_vli3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_kcnc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_skwvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_4cw3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_6046a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_dk4ai")
+}],
+"loop": true,
+"name": &"Walk_U",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("206_x0nlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_tw3ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_bc51n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_i3eeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_ybp6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_1ex6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_1l8da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_sgdjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_qtvp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_enhie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_t5d3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_t0j0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_ysdm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_4v8lq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_hunvj")
+}],
+"loop": true,
+"name": &"Walk_UL",
+"speed": 10.0
+}]
 
 [node name="Deer" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_3stdb")
+animation = &"Die_U"
