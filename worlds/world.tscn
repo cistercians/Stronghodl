@@ -1,16 +1,16 @@
 [gd_scene load_steps=21 format=3 uid="uid://bbqtxjpx2clid"]
 
-[ext_resource type="Script" path="res://Scripts/world.gd" id="1_1q4vy"]
-[ext_resource type="Texture2D" uid="uid://poop273aw4kv" path="res://Img/Tiles/64x64.png" id="1_egloy"]
-[ext_resource type="Texture2D" uid="uid://dqhde24ty4t2l" path="res://Img/Tiles/194589.png" id="2_r0pfg"]
-[ext_resource type="Texture2D" uid="uid://c2dwb30w0noyo" path="res://Img/Tiles/mountain_landscape_25 (1).png" id="3_nwqox"]
-[ext_resource type="Texture2D" uid="uid://oct8ubb3dljs" path="res://Img/Tiles/Trees+ (1).png" id="4_78rv7"]
-[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="5_egtnv"]
-[ext_resource type="Texture2D" uid="uid://b7ycrid58fwhk" path="res://Img/Tiles/Surplus Trees (1).png" id="6_bon75"]
-[ext_resource type="Script" path="res://Scripts/DayNightCycle.gd" id="8_ufwcx"]
+[ext_resource type="Script" path="res://Scripts/world.gd" id="1_uloiw"]
+[ext_resource type="Texture2D" uid="uid://poop273aw4kv" path="res://Img/Tiles/64x64.png" id="2_y51ju"]
+[ext_resource type="Texture2D" uid="uid://dqhde24ty4t2l" path="res://Img/Tiles/194589.png" id="3_cx8e4"]
+[ext_resource type="Texture2D" uid="uid://oct8ubb3dljs" path="res://Img/Tiles/Trees+ (1).png" id="4_41b11"]
+[ext_resource type="Texture2D" uid="uid://c2dwb30w0noyo" path="res://Img/Tiles/mountain_landscape_25 (1).png" id="5_gaaun"]
+[ext_resource type="Texture2D" uid="uid://b7ycrid58fwhk" path="res://Img/Tiles/Surplus Trees (1).png" id="6_p1a1f"]
+[ext_resource type="Script" path="res://Scripts/DayNightCycle.gd" id="7_8rlod"]
+[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="8_bx14e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gx83k"]
-texture = ExtResource("1_egloy")
+texture = ExtResource("2_y51ju")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -1188,7 +1188,7 @@ texture_region_size = Vector2i(64, 64)
 6:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qlna1"]
-texture = ExtResource("2_r0pfg")
+texture = ExtResource("3_cx8e4")
 margins = Vector2i(0, 21)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -5278,7 +5278,7 @@ texture_region_size = Vector2i(64, 64)
 39:33/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xxx4e"]
-texture = ExtResource("4_78rv7")
+texture = ExtResource("4_41b11")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -7319,7 +7319,7 @@ texture_region_size = Vector2i(64, 64)
 24:28/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x51y6"]
-texture = ExtResource("3_nwqox")
+texture = ExtResource("5_gaaun")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -8035,7 +8035,7 @@ texture_region_size = Vector2i(64, 64)
 4:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.2635, 105.359, -16.9706, 32, 12.0208, 32, 11.3137, 107.48)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghpii"]
-texture = ExtResource("6_bon75")
+texture = ExtResource("6_p1a1f")
 margins = Vector2i(51, 31)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -9667,7 +9667,7 @@ colors = PackedColorArray(0.121569, 0.113725, 0.388235, 1, 0.121569, 0.113725, 0
 gradient = SubResource("Gradient_k1a2d")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rqf22"]
-texture = ExtResource("2_r0pfg")
+texture = ExtResource("3_cx8e4")
 margins = Vector2i(0, 20)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -75849,7 +75849,7 @@ texture_region_size = Vector2i(64, 64)
 160:136/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22dvt"]
-texture = ExtResource("1_egloy")
+texture = ExtResource("2_y51ju")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -76780,7 +76780,7 @@ texture_region_size = Vector2i(64, 64)
 6:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0c0xl"]
-texture = ExtResource("3_nwqox")
+texture = ExtResource("5_gaaun")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -77565,7 +77565,7 @@ sources/1 = SubResource("TileSetAtlasSource_22dvt")
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_1q4vy")
+script = ExtResource("1_uloiw")
 
 [node name="Overworld" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -77577,11 +77577,11 @@ layer_0/y_sort_enabled = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Overworld"]
 color = Color(0.121569, 0.113725, 0.388235, 1)
-script = ExtResource("8_ufwcx")
+script = ExtResource("7_8rlod")
 gradient = SubResource("GradientTexture1D_gpn6w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("5_egtnv")
+script = ExtResource("8_bx14e")
 
 [node name="Underworld" type="TileMap" parent="."]
 z_index = -1
