@@ -1,6 +1,7 @@
-[gd_scene load_steps=222 format=3 uid="uid://b1vxcloy780yi"]
+[gd_scene load_steps=225 format=3 uid="uid://b1vxcloy780yi"]
 
 [ext_resource type="Texture2D" uid="uid://dd1fasojthbsn" path="res://Characters/Deer/Sprites/Die/Deerdie001.png" id="1_e4f3y"]
+[ext_resource type="Script" path="res://Characters/Deer/Deer.gd" id="1_orisw"]
 [ext_resource type="Texture2D" uid="uid://cngaijovgyxrn" path="res://Characters/Deer/Sprites/Die/Deerdie002.png" id="2_2gckp"]
 [ext_resource type="Texture2D" uid="uid://2uy545b66qp1" path="res://Characters/Deer/Sprites/Die/Deerdie003.png" id="3_6uane"]
 [ext_resource type="Texture2D" uid="uid://u0eo0ce8cmeq" path="res://Characters/Deer/Sprites/Die/Deerdie004.png" id="4_qvme0"]
@@ -984,10 +985,27 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Deer" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_lx45c"]
+radius = 160.05
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhpe2"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="Deer" type="CharacterBody2D"]
+script = ExtResource("1_orisw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9, 0)
 sprite_frames = SubResource("SpriteFrames_3stdb")
-animation = &"Die_U"
+animation = &"Walk_UL"
+frame_progress = 0.44072
+
+[node name="Detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+shape = SubResource("CircleShape2D_lx45c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fhpe2")
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
