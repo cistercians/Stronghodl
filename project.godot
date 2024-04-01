@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-BgmPlayer="*res://bgm_player.tscn"
-AmbPlayer="*res://amb_player.tscn"
+BgmPlayer="*res://Audio/bgm_player.tscn"
+AmbPlayer="*res://Audio/amb_player.tscn"
 
 [editor_plugins]
 
