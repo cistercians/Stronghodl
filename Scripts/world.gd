@@ -3,6 +3,7 @@ extends Node2D
 @onready var overworld = $Overworld
 @onready var underworld = $Underworld
 @onready var canvas_modulate = $CanvasModulate
+@onready var tileset = $TileSet
 
 const MAP_SIZE = Vector2(512,512)
 var borders = Rect2(1,1,MAP_SIZE.x-1,MAP_SIZE.y-1)
@@ -23,11 +24,13 @@ var exits = []
 
 func _ready():
 	generate_overworld()
-	generate_underworld()
+	#generate_underworld()
+	generate_fauna()
 	print('test-yeet')
 	randomize()
 	BgmPlayer.play_soundtrack(BgmPlayer.THEMES.OVERWORLD_NIGHT)
 	AmbPlayer.play_ambience(AmbPlayer.ENV.FOREST)
+	
 func generate_overworld():
 	print("Generating overworld...")
 	var biome_noise = FastNoiseLite.new()
@@ -110,3 +113,23 @@ func generate_underworld():
 	underworld.set_cells_terrain_connect(0,under_water,0,4)
 	underworld.set_cells_terrain_connect(0,exits,0,3)
 	print("Generated underworld")
+	
+func generate_fauna():
+	print("Generating fauna")
+	var deer_scene = preload("res://Characters/Deer/Deer.tscn")
+	var wolf_scene = preload("res://Characters/Wolf/Wolf.tscn")
+	var deerRatio = land.size()/400
+	for n in deerRatio:
+		var deer = deer_scene.instantiate()
+		var pos = land[randi() % land.size()] * 64
+		deer.position = pos
+		add_child(deer)
+		print("Deer @ " + str(pos))
+	var wolfRatio = land.size()/800
+	for n in wolfRatio:
+		var wolf = wolf_scene.instantiate()
+		var pos = land[randi() % land.size()] * 64
+		wolf.position = pos
+		add_child(wolf)
+		print("Wolf @ " + str(pos))
+	

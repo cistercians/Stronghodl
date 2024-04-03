@@ -1379,7 +1379,9 @@ radius = 107.019
 script = ExtResource("1_5ihoh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 position = Vector2(0, 5)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_wpybi")
 animation = &"Die_U"
 
