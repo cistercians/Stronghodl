@@ -24,7 +24,7 @@ var exits = []
 
 func _ready():
 	generate_overworld()
-	#generate_underworld()
+	generate_underworld()
 	generate_fauna()
 	print('test-yeet')
 	randomize()

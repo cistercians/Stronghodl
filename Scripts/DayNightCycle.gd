@@ -1,6 +1,6 @@
 extends CanvasModulate
 @export var gradient:GradientTexture1D
-@export var INGAME_SPEED = 5.0
+@export var INGAME_SPEED = 2.5
 @export var INITIAL_HOUR = 0
 var time:float = 0.0
 var past_hour = -1
