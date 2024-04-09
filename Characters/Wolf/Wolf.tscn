@@ -1,4 +1,4 @@
-[gd_scene load_steps=315 format=3 uid="uid://d2gvspi4cq5uj"]
+[gd_scene load_steps=316 format=3 uid="uid://d2gvspi4cq5uj"]
 
 [ext_resource type="Script" path="res://Characters/Wolf/Wolf.gd" id="1_5ihoh"]
 [ext_resource type="Texture2D" uid="uid://l8satwhw4mca" path="res://Characters/Wolf/Sprites/Attack/Wolfattack001.png" id="2_5bu1s"]
@@ -311,6 +311,7 @@
 [ext_resource type="Texture2D" uid="uid://bx7wtlcynp8cr" path="res://Characters/Wolf/Sprites/Walk/Wolfwalk038.png" id="309_fu4vh"]
 [ext_resource type="Texture2D" uid="uid://fmuktc8wxpa1" path="res://Characters/Wolf/Sprites/Walk/Wolfwalk039.png" id="310_ybcxo"]
 [ext_resource type="Texture2D" uid="uid://b6gtw6dm6ydpk" path="res://Characters/Wolf/Sprites/Walk/Wolfwalk040.png" id="311_oex8l"]
+[ext_resource type="Script" path="res://States/StateMachine.gd" id="312_bwgor"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wpybi"]
 animations = [{
@@ -1392,6 +1393,9 @@ shape = SubResource("CircleShape2D_88unv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_7s52r")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("312_bwgor")
 
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]

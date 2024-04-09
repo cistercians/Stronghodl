@@ -1,6 +1,6 @@
 extends CanvasModulate
 @export var gradient:GradientTexture1D
-@export var INGAME_SPEED = 2.5
+@export var INGAME_SPEED = 1
 @export var INITIAL_HOUR = 0
 var time:float = 0.0
 var past_hour = -1
@@ -39,7 +39,7 @@ func _recalculate_time():
 			elif hour == 11:
 				randomize()
 				BgmPlayer.play_soundtrack(BgmPlayer.THEMES.OVERWORLD_DAY)
-			elif hour == 19:
+			elif hour == 18:
 				randomize()
 				BgmPlayer.play_soundtrack(BgmPlayer.THEMES.OVERWORLD_NIGHT)
 				AmbPlayer.play_ambience(AmbPlayer.ENV.FOREST)
