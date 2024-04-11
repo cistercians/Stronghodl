@@ -1,6 +1,9 @@
 extends State
 class_name Idle
 
+@export var char: CharacterBody2D
+@export var move_speed:= 10
+
 var move_direction: Vector2
 var wander_time: float
 
@@ -18,5 +21,5 @@ func Update(delta: float):
 		randomize_wander()
 		
 func Physics_Update(delta: float):
-	if enemy:
-		enemy.velocity
+	if char:
+		char.velocity = move_direction * move_speed

@@ -1,5 +1,4 @@
-extends Node
-class_name State
+class_name State extends Node
 signal Transitioned
 
 func Enter():
@@ -13,3 +12,4 @@ func Update(_delta: float):
 	
 func Physics_Update(_delta: float):
 	pass
+
