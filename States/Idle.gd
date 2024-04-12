@@ -2,7 +2,7 @@ extends State
 class_name Idle
 
 @export var char: CharacterBody2D
-@export var move_speed:= 10
+@export var move_speed:= 30
 
 var move_direction: Vector2
 var wander_time: float

@@ -5,7 +5,7 @@ extends Node2D
 @onready var canvas_modulate = $CanvasModulate
 @onready var tileset = $TileSet
 
-const MAP_SIZE = Vector2(512,512)
+const MAP_SIZE = Vector2(265,256)
 var borders = Rect2(1,1,MAP_SIZE.x-1,MAP_SIZE.y-1)
 
 var land = []
