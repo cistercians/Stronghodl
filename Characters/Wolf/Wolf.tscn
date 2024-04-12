@@ -1402,6 +1402,7 @@ initial_state = NodePath("Idle")
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("char")]
 script = ExtResource("313_hpkse")
 char = NodePath("../..")
+move_speed = 30
 
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]

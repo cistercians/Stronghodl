@@ -1,4 +1,4 @@
-[gd_scene load_steps=225 format=3 uid="uid://b1vxcloy780yi"]
+[gd_scene load_steps=227 format=3 uid="uid://b1vxcloy780yi"]
 
 [ext_resource type="Texture2D" uid="uid://dd1fasojthbsn" path="res://Characters/Deer/Sprites/Die/Deerdie001.png" id="1_e4f3y"]
 [ext_resource type="Script" path="res://Characters/Deer/Deer.gd" id="1_orisw"]
@@ -221,6 +221,8 @@
 [ext_resource type="Texture2D" uid="uid://c1nxrlwqfmweg" path="res://Characters/Deer/Sprites/Walk/Deerwalk058.png" id="218_ysdm1"]
 [ext_resource type="Texture2D" uid="uid://cjo4tw7gnhekj" path="res://Characters/Deer/Sprites/Walk/Deerwalk059.png" id="219_4v8lq"]
 [ext_resource type="Texture2D" uid="uid://ce112ru1fba2i" path="res://Characters/Deer/Sprites/Walk/Deerwalk060.png" id="220_hunvj"]
+[ext_resource type="Script" path="res://States/StateMachine.gd" id="222_c43m0"]
+[ext_resource type="Script" path="res://States/Idle.gd" id="223_pj1tv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3stdb"]
 animations = [{
@@ -1008,6 +1010,14 @@ shape = SubResource("CircleShape2D_lx45c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fhpe2")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("222_c43m0")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("char")]
+script = ExtResource("223_pj1tv")
+char = NodePath("../..")
 
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
