@@ -124,12 +124,10 @@ func generate_fauna():
 		var pos = land[randi() % land.size()] * 64
 		deer.position = pos
 		add_child(deer)
-		print("Deer @ " + str(pos))
 	var wolfRatio = land.size()/800
 	for n in wolfRatio:
 		var wolf = wolf_scene.instantiate()
 		var pos = land[randi() % land.size()] * 64
 		wolf.position = pos
 		add_child(wolf)
-		print("Wolf @ " + str(pos))
 	
