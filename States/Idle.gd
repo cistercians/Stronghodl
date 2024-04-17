@@ -6,10 +6,12 @@ class_name Idle
 
 var move_direction: Vector2
 var wander_time: float
+var wander_cooldown: float
 
 func randomize_wander():
 	move_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
 	wander_time = randf_range(5, 10)
+	wander_cooldown = randf_range(5, 10)
 	char.moving = 1
 	
 func Enter():
@@ -17,8 +19,10 @@ func Enter():
 
 func Update(delta: float):
 	if wander_time > 0:
-		char.moving = 0
 		wander_time -= delta
+	elif wander_cooldown > 0:
+		char.moving = 0
+		wander_cooldown -= delta
 	else:
 		randomize_wander()
 		
