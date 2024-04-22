@@ -27,5 +27,11 @@ func Update(delta: float):
 		randomize_wander()
 		
 func Physics_Update(delta: float):
-	char.update_direction(move_direction)
+	char.direction = update_direction(move_direction)
 	char.velocity = move_direction * move_speed
+	
+func update_direction(dir):
+	var arr = ["R","DR","D","DL","L","UL","U","UR"]
+	var val = int(rad_to_deg(dir.angle())/45)
+	var direction = arr[val % 8]
+	return direction

@@ -35,12 +35,6 @@ func _process(_delta):
 	
 func _physics_process(delta):
 	move_and_slide()
-	
-func update_direction(dir):
-	var arr = ["U","UR","R","DR","D","DL","L","UL"]
-	var inc = PI/4
-	var val = int(floor((dir.angle()/inc) + 0.5))
-	direction = arr[val % 8]
 
 func _on_detection_body_entered(body):
 	pass # Replace with function body.
