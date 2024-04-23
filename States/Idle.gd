@@ -21,6 +21,7 @@ func Update(delta: float):
 	if wander_time > 0:
 		wander_time -= delta
 	elif wander_cooldown > 0:
+		char.velocity = Vector2.ZERO
 		char.moving = 0
 		wander_cooldown -= delta
 	else:
@@ -32,6 +33,6 @@ func Physics_Update(delta: float):
 	
 func update_direction(dir):
 	var arr = ["R","DR","D","DL","L","UL","U","UR"]
-	var val = int(rad_to_deg(dir.angle())/45)
-	var direction = arr[val % 8]
+	var val = dir.angle() / (PI/4)
+	var direction = arr[wrapi(int(val), 0,8)]
 	return direction

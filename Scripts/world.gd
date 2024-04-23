@@ -118,6 +118,7 @@ func generate_fauna():
 	print("Generating fauna")
 	var deer_scene = preload("res://Characters/Deer/Deer.tscn")
 	var wolf_scene = preload("res://Characters/Wolf/Wolf.tscn")
+	var boar_scene = preload("res://Characters/Boar/Boar.tscn")
 	var deerRatio = land.size()/400
 	for n in deerRatio:
 		var deer = deer_scene.instantiate()
@@ -130,4 +131,10 @@ func generate_fauna():
 		var pos = land[randi() % land.size()] * 64
 		wolf.position = pos
 		add_child(wolf)
+	var boarRatio = land.size()/1600
+	for n in boarRatio:
+		var boar = boar_scene.instantiate()
+		var pos = land[randi() % land.size()] * 64
+		boar.position = pos
+		add_child(boar)
 	
