@@ -562,7 +562,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_D",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -597,7 +597,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_DL",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -632,7 +632,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_L",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -667,7 +667,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_U",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -702,7 +702,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_UL",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -912,7 +912,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_D",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -947,7 +947,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_DL",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -982,7 +982,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_L",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1017,7 +1017,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_U",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1052,7 +1052,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_UL",
-"speed": 7.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0sbni"]
@@ -1063,9 +1063,11 @@ animations = [{
 script = ExtResource("1_bg2ad")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_p3hae")
-animation = &"Attack_L"
+animation = &"Walk_UL"
+frame_progress = 0.942045
 
 [node name="Detection" type="Area2D" parent="."]
 
@@ -1077,8 +1079,11 @@ shape = SubResource("CircleShape2D_wrbw8")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("239_rrtah")
-initial_state = NodePath("")
+initial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("char")]
 script = ExtResource("240_dwim0")
-char = NodePath("")
+char = NodePath("../..")
+
+[connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
+[connection signal="body_shape_entered" from="Detection" to="." method="_on_detection_body_shape_entered"]

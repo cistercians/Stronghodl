@@ -494,7 +494,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_D",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -529,7 +529,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_DL",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -564,7 +564,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_L",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -599,7 +599,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_U",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -634,7 +634,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_UL",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -654,7 +654,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_D",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -674,7 +674,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_DL",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -694,7 +694,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_L",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -714,7 +714,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_U",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -734,7 +734,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_UL",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -784,7 +784,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_D",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -834,7 +834,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_DL",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -884,7 +884,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_L",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -934,7 +934,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_U",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -984,7 +984,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_UL",
-"speed": 10.0
+"speed": 15.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lx45c"]
@@ -1001,7 +1001,7 @@ position = Vector2(-9, 0)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_3stdb")
 animation = &"Walk_UL"
-frame_progress = 0.44072
+frame_progress = 0.516384
 
 [node name="Detection" type="Area2D" parent="."]
 

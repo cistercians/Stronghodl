@@ -379,7 +379,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack_D",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -444,7 +444,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack_DL",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -509,7 +509,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack_L",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -574,7 +574,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack_U",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -639,7 +639,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack_UL",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -855,7 +855,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_D",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -896,7 +896,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_DL",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -937,7 +937,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_L",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -978,7 +978,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_U",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1019,7 +1019,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run_UL",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1054,7 +1054,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_D",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1089,7 +1089,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_DL",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1124,7 +1124,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_L",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1159,7 +1159,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_U",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1194,7 +1194,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Stand_UL",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1385,7 +1385,8 @@ z_index = 1
 position = Vector2(0, 5)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_wpybi")
-animation = &"Die_U"
+animation = &"Walk_UL"
+frame_progress = 0.958681
 
 [node name="Detection" type="Area2D" parent="."]
 
