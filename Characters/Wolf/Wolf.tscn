@@ -1386,7 +1386,7 @@ position = Vector2(0, 5)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_wpybi")
 animation = &"Walk_UL"
-frame_progress = 0.958681
+frame_progress = 0.19439
 
 [node name="Detection" type="Area2D" parent="."]
 
