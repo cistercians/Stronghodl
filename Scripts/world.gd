@@ -15,6 +15,7 @@ var water = []
 var mountains = []
 var caves = []
 var bushes = []
+var grass = []
 
 var walls = []
 var ground = []
@@ -73,6 +74,8 @@ func generate_overworld():
 					elif b < 0.45:
 						if randf() < 0.618:
 							bushes.append(Vector2(x,y))
+					else:
+						grass.append(Vector2(x,y))
 							
 	overworld.set_cells_terrain_connect(0,land,0,0)
 	overworld.set_cells_terrain_connect(0,rocks,0,1)

@@ -9635,6 +9635,7 @@ texture_region_size = Vector2i(64, 64)
 16:19/0/terrain = 6
 16:19/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:19/0/physics_layer_0/angular_velocity = 0.0
+16:19/0/custom_data_2 = 3
 
 [sub_resource type="TileSet" id="TileSet_qr8mt"]
 tile_size = Vector2i(64, 64)
@@ -14999,6 +15000,7 @@ texture_region_size = Vector2i(64, 64)
 0:11/0/terrain = 2
 0:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:11/0/physics_layer_0/angular_velocity = 0.0
+0:11/0/custom_data_0 = 50
 1:11/0 = 0
 1:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:11/0/physics_layer_0/angular_velocity = 0.0
@@ -77569,6 +77571,8 @@ terrain_set_0/terrain_3/name = "Exit"
 terrain_set_0/terrain_3/color = Color(0.654902, 0.623529, 0.407843, 1)
 terrain_set_0/terrain_4/name = "Water"
 terrain_set_0/terrain_4/color = Color(0.258824, 0.258824, 0.788235, 1)
+custom_data_layer_0/name = "Ore"
+custom_data_layer_0/type = 2
 sources/0 = SubResource("TileSetAtlasSource_rqf22")
 sources/2 = SubResource("TileSetAtlasSource_0c0xl")
 sources/1 = SubResource("TileSetAtlasSource_22dvt")
