@@ -998,10 +998,10 @@ script = ExtResource("1_orisw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
 position = Vector2(-9, 0)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_3stdb")
 animation = &"Walk_UL"
-frame_progress = 0.516384
+frame_progress = 0.372896
 
 [node name="Detection" type="Area2D" parent="."]
 

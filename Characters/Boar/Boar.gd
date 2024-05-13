@@ -42,4 +42,4 @@ func _on_detection_body_shape_entered(body_rid, body, body_shape_index, local_sh
 
 
 func _on_detection_body_exited(body):
-	pass # Replace with function body.
+	pass # Replace with $Camera2Dfunction body.

@@ -5475,10 +5475,10 @@ animations = [{
 script = ExtResource("1_imvcj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_5avm7")
 animation = &"Lumber2_UL"
-frame_progress = 0.935746
+frame_progress = 0.897345
 
 [node name="Detection" type="Area2D" parent="."]
 

@@ -1383,10 +1383,10 @@ script = ExtResource("1_5ihoh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
 position = Vector2(0, 5)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_wpybi")
 animation = &"Walk_UL"
-frame_progress = 0.19439
+frame_progress = 0.196015
 
 [node name="Detection" type="Area2D" parent="."]
 

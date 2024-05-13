@@ -1064,10 +1064,10 @@ script = ExtResource("1_bg2ad")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_p3hae")
 animation = &"Walk_UL"
-frame_progress = 0.942045
+frame_progress = 0.182392
 
 [node name="Detection" type="Area2D" parent="."]
 
