@@ -997,6 +997,7 @@ script = ExtResource("1_orisw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
+y_sort_enabled = true
 position = Vector2(-9, 0)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_3stdb")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnbjvs478enax"]
+
+[ext_resource type="Texture2D" uid="uid://d1qktm755qno4" path="res://Img/Tiles/stree.png" id="1_c6j7u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eixam"]
+
+[node name="Mtree" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("1_c6j7u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_eixam")

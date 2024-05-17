@@ -5475,6 +5475,7 @@ animations = [{
 script = ExtResource("1_imvcj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_5avm7")
 animation = &"Lumber2_UL"
@@ -5488,10 +5489,8 @@ shape = SubResource("CircleShape2D_n3tba")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3abxd")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+[node name="StateMachine" type="Node" parent="."]
 script = ExtResource("1267_nruok")
-initial_state = NodePath("")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("char")]
+[node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("1268_83lc5")
-char = NodePath("")

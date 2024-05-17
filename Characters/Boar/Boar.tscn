@@ -1064,6 +1064,7 @@ script = ExtResource("1_bg2ad")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
+y_sort_enabled = true
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_p3hae")
 animation = &"Walk_UL"

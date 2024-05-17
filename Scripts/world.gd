@@ -26,6 +26,7 @@ var exits = []
 func _ready():
 	generate_overworld()
 	generate_underworld()
+	generate_flora()
 	generate_fauna()
 	print('test-yeet')
 	randomize()
@@ -64,7 +65,7 @@ func generate_overworld():
 							caves.append(Vector2(x,y))
 					else:
 						mountains.append(Vector2(x,y))
-				elif a > 0.35:
+				elif a > 0.3:
 					rocks.append(Vector2(x,y))
 				else:
 					land.append(Vector2(x,y))
@@ -80,7 +81,7 @@ func generate_overworld():
 	overworld.set_cells_terrain_connect(0,land,0,0)
 	overworld.set_cells_terrain_connect(0,rocks,0,1)
 	overworld.set_cells_terrain_connect(0,water,0,2)
-	overworld.set_cells_terrain_connect(0,trees,0,3)
+	#overworld.set_cells_terrain_connect(0,trees,0,3)
 	overworld.set_cells_terrain_connect(0,mountains,0,4)
 	overworld.set_cells_terrain_connect(0,caves,0,5)
 	overworld.set_cells_terrain_connect(0,bushes,0,6)
@@ -117,6 +118,26 @@ func generate_underworld():
 	underworld.set_cells_terrain_connect(0,exits,0,3)
 	print("Generated underworld")
 	
+func generate_flora():
+	print("Generating flora")
+	var stree_scene = preload("res://Scenery/stree.tscn")
+	var mtree_scene = preload("res://Scenery/mtree.tscn")
+	var ltree_scene = preload("res://Scenery/ltree.tscn")
+	for t in trees:
+		var r = randf()
+		if r < 0.3:
+			var tree = ltree_scene.instantiate()
+			tree.position = t * 64
+			add_child(tree)
+		elif r < 0.8: 
+			var tree = mtree_scene.instantiate()
+			tree.position = t * 64
+			add_child(tree)
+		else:
+			var tree = stree_scene.instantiate()
+			tree.position = t * 64
+			add_child(tree)
+			
 func generate_fauna():
 	print("Generating fauna")
 	var deer_scene = preload("res://Characters/Deer/Deer.tscn")
@@ -140,4 +161,3 @@ func generate_fauna():
 		var pos = land[randi() % land.size()] * 64
 		boar.position = pos
 		add_child(boar)
-	

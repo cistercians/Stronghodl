@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dotoaav5j2glp"]
+
+[ext_resource type="Texture2D" uid="uid://bfnm36xjxbct2" path="res://Img/Tiles/ltree.png" id="1_8rvi3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6bod"]
+
+[node name="Ltree" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("1_8rvi3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w6bod")
