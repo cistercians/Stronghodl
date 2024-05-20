@@ -5476,7 +5476,7 @@ script = ExtResource("1_imvcj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_5avm7")
 animation = &"Lumber2_UL"
 frame_progress = 0.897345
