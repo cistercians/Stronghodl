@@ -70,8 +70,7 @@ func generate_overworld():
 					rocks.append(Vector2(x,y))
 				elif a > 0.1 && b < 0.2:
 					land.append(Vector2(x,y))
-					if randf() < 0.618:
-						dtrees.append(Vector2(x,y))
+					dtrees.append(Vector2(x,y))
 				else:
 					land.append(Vector2(x,y))
 					if b < 0.3:
@@ -147,19 +146,20 @@ func generate_flora():
 			tree.position = t * 64
 			add_child(tree)
 	for t in dtrees:
-		var r = randf()
-		if r < 0.3:
-			var tree = dtree1_scene.instantiate()
-			tree.position = t * 64
-			add_child(tree)
-		elif r < 0.8:
-			var tree = dtree3_scene.instantiate()
-			tree.position = t * 64
-			add_child(tree)
-		else:
-			var tree = dtree2_scene.instantiate()
-			tree.position = t * 64
-			add_child(tree)
+		if randf() < 0.618:
+			var r = randf()
+			if r < 0.3:
+				var tree = dtree1_scene.instantiate()
+				tree.position = t * 64
+				add_child(tree)
+			elif r < 0.8:
+				var tree = dtree3_scene.instantiate()
+				tree.position = t * 64
+				add_child(tree)
+			else:
+				var tree = dtree2_scene.instantiate()
+				tree.position = t * 64
+				add_child(tree)
 			
 func generate_fauna():
 	print("Generating fauna")

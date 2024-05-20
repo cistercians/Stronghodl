@@ -8,12 +8,14 @@ size = Vector2(11, 12)
 [node name="Stree" type="StaticBody2D"]
 z_index = 1
 y_sort_enabled = true
+position = Vector2(12, 11)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 y_sort_enabled = true
+position = Vector2(0, -56)
 texture = ExtResource("1_pquu1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 55)
+position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_ijmqr")

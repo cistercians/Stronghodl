@@ -1,18 +1,20 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnbjvs478enax"]
 
-[ext_resource type="Texture2D" uid="uid://d1qktm755qno4" path="res://Img/Tiles/stree.png" id="1_c6j7u"]
+[ext_resource type="Texture2D" uid="uid://dkxlsh1rotjpc" path="res://Img/Tiles/mtree.png" id="1_4jq07"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eixam"]
 size = Vector2(13, 13)
 
 [node name="Mtree" type="StaticBody2D"]
 y_sort_enabled = true
+position = Vector2(18, 13)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 y_sort_enabled = true
-texture = ExtResource("1_c6j7u")
+position = Vector2(0, -85)
+texture = ExtResource("1_4jq07")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 56.5)
+position = Vector2(-0.5, 12.5)
 shape = SubResource("RectangleShape2D_eixam")
