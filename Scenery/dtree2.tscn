@@ -1,18 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://btpr1fvnjutua"]
+[gd_scene load_steps=3 format=3 uid="uid://sxpxykkd34vx"]
 
-[ext_resource type="Texture2D" uid="uid://d1qktm755qno4" path="res://Img/Tiles/stree.png" id="1_pquu1"]
+[ext_resource type="Texture2D" uid="uid://dr8rkplp1en1c" path="res://Img/Tiles/Tree007.png" id="1_i765c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijmqr"]
-size = Vector2(11, 12)
+size = Vector2(15, 20)
 
 [node name="Stree" type="StaticBody2D"]
 z_index = 1
 y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 y_sort_enabled = true
-texture = ExtResource("1_pquu1")
+position = Vector2(28, -67)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_i765c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 55)
+position = Vector2(33, 30)
 shape = SubResource("RectangleShape2D_ijmqr")

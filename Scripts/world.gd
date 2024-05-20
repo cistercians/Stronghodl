@@ -16,6 +16,7 @@ var mountains = []
 var caves = []
 var bushes = []
 var grass = []
+var dtrees = []
 
 var walls = []
 var ground = []
@@ -67,6 +68,10 @@ func generate_overworld():
 						mountains.append(Vector2(x,y))
 				elif a > 0.3:
 					rocks.append(Vector2(x,y))
+				elif a > 0.1:
+					land.append(Vector2(x,y))
+					if randf() < 0.618:
+						dtrees.append(Vector2(x,y))
 				else:
 					land.append(Vector2(x,y))
 					if b < 0.3:
@@ -81,10 +86,11 @@ func generate_overworld():
 	overworld.set_cells_terrain_connect(0,land,0,0)
 	overworld.set_cells_terrain_connect(0,rocks,0,1)
 	overworld.set_cells_terrain_connect(0,water,0,2)
-	#overworld.set_cells_terrain_connect(0,trees,0,3)
+	overworld.set_cells_terrain_connect(0,trees,0,3)
 	overworld.set_cells_terrain_connect(0,mountains,0,4)
 	overworld.set_cells_terrain_connect(0,caves,0,5)
 	overworld.set_cells_terrain_connect(0,bushes,0,6)
+	overworld.set_cells_terrain_connect(0,dtrees,0,7)
 	
 	print("Generated overworld")
 		
@@ -123,6 +129,9 @@ func generate_flora():
 	var stree_scene = preload("res://Scenery/stree.tscn")
 	var mtree_scene = preload("res://Scenery/mtree.tscn")
 	var ltree_scene = preload("res://Scenery/ltree.tscn")
+	var dtree1_scene = preload("res://Scenery/dtree1.tscn")
+	var dtree2_scene = preload("res://Scenery/dtree2.tscn")
+	var dtree3_scene = preload("res://Scenery/dtree3.tscn")
 	for t in trees:
 		var r = randf()
 		if r < 0.3:
@@ -135,6 +144,20 @@ func generate_flora():
 			add_child(tree)
 		else:
 			var tree = stree_scene.instantiate()
+			tree.position = t * 64
+			add_child(tree)
+	for t in dtrees:
+		var r = randf()
+		if r < 0.3:
+			var tree = dtree1_scene.instantiate()
+			tree.position = t * 64
+			add_child(tree)
+		elif r < 0.8:
+			var tree = dtree3_scene.instantiate()
+			tree.position = t * 64
+			add_child(tree)
+		else:
+			var tree = dtree2_scene.instantiate()
 			tree.position = t * 64
 			add_child(tree)
 			
