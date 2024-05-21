@@ -146,7 +146,7 @@ func generate_flora():
 			tree.position = t * 64
 			add_child(tree)
 	for t in dtrees:
-		if randf() < 0.618:
+		if randf() > 0.618:
 			var r = randf()
 			if r < 0.3:
 				var tree = dtree1_scene.instantiate()
