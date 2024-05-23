@@ -137,7 +137,7 @@ func generate_flora():
 			var tree = ltree_scene.instantiate()
 			tree.position = t * 64
 			add_child(tree)
-		elif r < 0.8: 
+		elif r < 0.7: 
 			var tree = mtree_scene.instantiate()
 			tree.position = t * 64
 			add_child(tree)
@@ -152,7 +152,7 @@ func generate_flora():
 				var tree = dtree1_scene.instantiate()
 				tree.position = t * 64
 				add_child(tree)
-			elif r < 0.8:
+			elif r < 0.7:
 				var tree = dtree3_scene.instantiate()
 				tree.position = t * 64
 				add_child(tree)
