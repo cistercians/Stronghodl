@@ -68,7 +68,7 @@ func generate_overworld():
 						mountains.append(Vector2(x,y))
 				elif a > 0.3:
 					rocks.append(Vector2(x,y))
-				elif a > 0.1 && b < 0.2:
+				elif a > 0.1 && b < 0.3:
 					land.append(Vector2(x,y))
 					dtrees.append(Vector2(x,y))
 				else:
