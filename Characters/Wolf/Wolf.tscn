@@ -1378,6 +1378,7 @@ radius = 107.019
 [sub_resource type="CircleShape2D" id="CircleShape2D_7s52r"]
 
 [node name="Wolf" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_5ihoh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -1404,6 +1405,8 @@ initial_state = NodePath("Idle")
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("char")]
 script = ExtResource("313_hpkse")
 char = NodePath("../..")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]

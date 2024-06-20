@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var _animated_sprite = $AnimatedSprite2D
+@onready var nav = $NavigationAgent2D
 @export var moving = 0
 @onready var direction = "D"
 

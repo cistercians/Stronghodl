@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var overworld = $Overworld
 @onready var underworld = $Underworld
+@onready var underwater = $Underwater
 @onready var canvas_modulate = $CanvasModulate
 @onready var tileset = $TileSet
 
@@ -16,7 +17,7 @@ var mountains = []
 var caves = []
 var bushes = []
 var grass = []
-var dtrees = []
+var dry = []
 
 var walls = []
 var ground = []
@@ -27,6 +28,7 @@ var exits = []
 func _ready():
 	generate_overworld()
 	generate_underworld()
+	generate_underwater()
 	generate_flora()
 	generate_fauna()
 	print('test-yeet')
@@ -56,8 +58,9 @@ func generate_overworld():
 			if b < -0.1:
 				water.append(Vector2(x,y))
 			else:
+				land.append(Vector2(x,y))
 				if a > 0.45:
-					if randf() < 0.004:
+					if randf() < 0.005:
 						if caves.size() > 0:
 							var lastCave = caves[caves.size()-1]
 							if Vector2(x,y).distance_to(lastCave) > 10:
@@ -69,10 +72,8 @@ func generate_overworld():
 				elif a > 0.3:
 					rocks.append(Vector2(x,y))
 				elif a > 0.1 && b < 0.3:
-					land.append(Vector2(x,y))
-					dtrees.append(Vector2(x,y))
+					dry.append(Vector2(x,y))
 				else:
-					land.append(Vector2(x,y))
 					if b < 0.3:
 						if randf() < 0.618:
 							trees.append(Vector2(x,y))
@@ -82,6 +83,12 @@ func generate_overworld():
 					else:
 						grass.append(Vector2(x,y))
 							
+	if(len(water) > len(land)):
+		print("Overworld map rejected: excessive water")
+		generate_overworld()
+	elif(len(caves) == 0):
+		print("Overworld map rejected: no caves")
+		generate_overworld()
 	overworld.set_cells_terrain_connect(0,land,0,0)
 	overworld.set_cells_terrain_connect(0,rocks,0,1)
 	overworld.set_cells_terrain_connect(0,water,0,2)
@@ -89,7 +96,7 @@ func generate_overworld():
 	overworld.set_cells_terrain_connect(0,mountains,0,4)
 	overworld.set_cells_terrain_connect(0,caves,0,5)
 	overworld.set_cells_terrain_connect(0,bushes,0,6)
-	overworld.set_cells_terrain_connect(0,dtrees,0,7)
+	overworld.set_cells_terrain_connect(0,dry,0,7)
 	
 	print("Generated overworld")
 		
@@ -109,7 +116,7 @@ func generate_underworld():
 		walker.queue_free()
 		for location in map:
 			if water.has(location):
-				if randf() > 0.618:
+				if randf() < 0.236:
 					under_water.append(location)
 				else:
 					ground.append(location)
@@ -122,6 +129,10 @@ func generate_underworld():
 	underworld.set_cells_terrain_connect(0,under_water,0,4)
 	underworld.set_cells_terrain_connect(0,exits,0,3)
 	print("Generated underworld")
+	
+func generate_underwater():
+	underwater.set_cells_terrain_connect(0,water,0,0)
+	#underwater.set_cells_terrain_connect(0,land,0,1)
 	
 func generate_flora():
 	print("Generating flora")
@@ -145,8 +156,8 @@ func generate_flora():
 			var tree = stree_scene.instantiate()
 			tree.position = t * 64
 			add_child(tree)
-	for t in dtrees:
-		if randf() > 0.618:
+	for t in dry:
+		if randf() < 0.236:
 			var r = randf()
 			if r < 0.3:
 				var tree = dtree1_scene.instantiate()
@@ -166,21 +177,30 @@ func generate_fauna():
 	var deer_scene = preload("res://Characters/Deer/Deer.tscn")
 	var wolf_scene = preload("res://Characters/Wolf/Wolf.tscn")
 	var boar_scene = preload("res://Characters/Boar/Boar.tscn")
-	var deerRatio = land.size()/400
+	var deerRatio = land.size()/600
+	var deerCount = 0
 	for n in deerRatio:
 		var deer = deer_scene.instantiate()
 		var pos = land[randi() % land.size()] * 64
 		deer.position = pos
 		add_child(deer)
-	var wolfRatio = land.size()/800
+		deerCount += 1
+	var wolfRatio = land.size()/1600
+	var wolfCount = 0
 	for n in wolfRatio:
 		var wolf = wolf_scene.instantiate()
 		var pos = land[randi() % land.size()] * 64
 		wolf.position = pos
 		add_child(wolf)
-	var boarRatio = land.size()/1600
+		wolfCount += 1
+	var boarRatio = land.size()/3200
+	var boarCount = 0
 	for n in boarRatio:
 		var boar = boar_scene.instantiate()
 		var pos = land[randi() % land.size()] * 64
 		boar.position = pos
 		add_child(boar)
+		boarCount += 1
+	print('deer: ', deerCount)
+	print('wolves: ', wolfCount)
+	print('boarCount: ', boarCount)

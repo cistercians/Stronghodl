@@ -1,6 +1,7 @@
 extends State
 class_name Idle
 
+@onready var overworld = get_node("../../../Overworld")
 @export var char: CharacterBody2D
 @export var move_speed:= 40
 
@@ -9,6 +10,8 @@ var wander_time: float
 var wander_cooldown: float
 
 func randomize_wander():
+	var pos = overworld.local_to_map(char.position)
+	var near = overworld.get_surrounding_cells(pos)
 	move_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
 	wander_time = randf_range(3, 5)
 	wander_cooldown = randf_range(5, 10)

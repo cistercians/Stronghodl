@@ -5472,6 +5472,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_3abxd"]
 
 [node name="VillagerMale" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_imvcj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
