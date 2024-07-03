@@ -2,40 +2,28 @@ extends State
 class_name Idle
 
 @onready var overworld = get_node("../../../Overworld")
+@onready var underworld = get_node("../../../Underworld")
 @export var char: CharacterBody2D
-@export var move_speed:= 40
 
-var move_direction: Vector2
-var wander_time: float
-var wander_cooldown: float
+var wander_timer = randf_range(1000,10000)
 
-func randomize_wander():
-	var pos = overworld.local_to_map(char.position)
-	var near = overworld.get_surrounding_cells(pos)
-	move_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
-	wander_time = randf_range(3, 5)
-	wander_cooldown = randf_range(5, 10)
-	char.moving = 1
-	
+func random_wander():
+	var x = randi_range(1,3) * 64
+	var y = randi_range(1,3) * 64
+	var target = Vector2(char.position.x + x, char.position.y + y)
+	print("position: ", char.position)
+	print("random wander target: ", target)
+	char.set_path(target)
+
 func Enter():
-	randomize_wander()
+	pass
 
 func Update(delta: float):
-	if wander_time > 0:
-		wander_time -= delta
-	elif wander_cooldown > 0:
-		char.velocity = Vector2.ZERO
-		char.moving = 0
-		wander_cooldown -= delta
+	if wander_timer > 0:
+		wander_timer -= 1
 	else:
-		randomize_wander()
+		wander_timer += randf_range(1000,5000)
+		random_wander()
 		
 func Physics_Update(delta: float):
-	char.direction = update_direction(move_direction)
-	char.velocity = move_direction * move_speed
-	
-func update_direction(dir):
-	var arr = ["R","DR","D","DL","L","UL","U","UR"]
-	var val = dir.angle() / (PI/4)
-	var direction = arr[wrapi(int(val), 0,8)]
-	return direction
+	pass

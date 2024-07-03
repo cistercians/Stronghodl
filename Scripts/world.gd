@@ -4,7 +4,6 @@ extends Node2D
 @onready var underworld = $Underworld
 @onready var underwater = $Underwater
 @onready var canvas_modulate = $CanvasModulate
-@onready var tileset = $TileSet
 
 const MAP_SIZE = Vector2(256,256)
 var borders = Rect2(1,1,MAP_SIZE.x-1,MAP_SIZE.y-1)
@@ -84,7 +83,7 @@ func generate_overworld():
 						grass.append(Vector2(x,y))
 							
 	if(len(water) > len(land)):
-		print("Overworld map rejected: excessive water")
+		print("Overworld map rejected: excess water")
 		generate_overworld()
 	elif(len(caves) == 0):
 		print("Overworld map rejected: no caves")
@@ -97,11 +96,10 @@ func generate_overworld():
 	overworld.set_cells_terrain_connect(0,caves,0,5)
 	overworld.set_cells_terrain_connect(0,bushes,0,6)
 	overworld.set_cells_terrain_connect(0,dry,0,7)
-	
-	print("Generated overworld")
+	overworld.astar_setup()
 		
 func generate_underworld():
-	print("Generating underworld...")
+	print("Generating underworld")
 	for x in MAP_SIZE.x:
 		for y in MAP_SIZE.y:
 			if randf() > 0.618:
@@ -128,11 +126,10 @@ func generate_underworld():
 	underworld.set_cells_terrain_connect(0,ground,0,0)
 	underworld.set_cells_terrain_connect(0,under_water,0,4)
 	underworld.set_cells_terrain_connect(0,exits,0,3)
-	print("Generated underworld")
+	underworld.astar_setup()
 	
 func generate_underwater():
 	underwater.set_cells_terrain_connect(0,water,0,0)
-	#underwater.set_cells_terrain_connect(0,land,0,1)
 	
 func generate_flora():
 	print("Generating flora")
@@ -183,6 +180,7 @@ func generate_fauna():
 		var deer = deer_scene.instantiate()
 		var pos = land[randi() % land.size()] * 64
 		deer.position = pos
+		deer.home = pos
 		add_child(deer)
 		deerCount += 1
 	var wolfRatio = land.size()/1600
@@ -191,6 +189,7 @@ func generate_fauna():
 		var wolf = wolf_scene.instantiate()
 		var pos = land[randi() % land.size()] * 64
 		wolf.position = pos
+		wolf.home = pos
 		add_child(wolf)
 		wolfCount += 1
 	var boarRatio = land.size()/3200
@@ -199,6 +198,7 @@ func generate_fauna():
 		var boar = boar_scene.instantiate()
 		var pos = land[randi() % land.size()] * 64
 		boar.position = pos
+		boar.home = pos
 		add_child(boar)
 		boarCount += 1
 	print('deer: ', deerCount)

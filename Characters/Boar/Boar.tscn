@@ -1064,7 +1064,7 @@ motion_mode = 1
 script = ExtResource("1_bg2ad")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 1
+z_index = 2
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_p3hae")
@@ -1074,9 +1074,11 @@ frame_progress = 0.182392
 [node name="Detection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+z_index = 2
 shape = SubResource("CircleShape2D_0sbni")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
 shape = SubResource("CircleShape2D_wrbw8")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]

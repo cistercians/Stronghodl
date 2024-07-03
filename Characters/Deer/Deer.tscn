@@ -997,7 +997,7 @@ motion_mode = 1
 script = ExtResource("1_orisw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 1
+z_index = 2
 y_sort_enabled = true
 position = Vector2(-9, 0)
 scale = Vector2(2, 2)
@@ -1008,9 +1008,11 @@ frame_progress = 0.372896
 [node name="Detection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+z_index = 2
 shape = SubResource("CircleShape2D_lx45c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
 shape = SubResource("CircleShape2D_fhpe2")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]

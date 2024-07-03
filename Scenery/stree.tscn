@@ -11,10 +11,12 @@ y_sort_enabled = true
 position = Vector2(36, 27)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 y_sort_enabled = true
-position = Vector2(24, -65)
+position = Vector2(31, -14)
 texture = ExtResource("1_pquu1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_ijmqr")
