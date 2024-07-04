@@ -62,9 +62,12 @@ func _process(_delta):
 
 func _physics_process(delta):
 	if path.is_empty():
+		moving = 0
 		return
 	var target_position = overworld.map_to_local(path.front())
 	global_position = global_position.move_toward(target_position, speed)
+	direction = update_direction(global_position.direction_to(target_position))
+	moving = 1
 	if global_position == target_position:
 		path.pop_front()
 

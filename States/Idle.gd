@@ -5,7 +5,7 @@ class_name Idle
 @onready var underworld = get_node("../../../Underworld")
 @export var char: CharacterBody2D
 
-var wander_timer = randf_range(1000,10000)
+var wander_timer = randf_range(500,5000)
 
 func random_wander():
 	var x = randi_range(1,3) * 64
@@ -22,7 +22,7 @@ func Update(delta: float):
 	if wander_timer > 0:
 		wander_timer -= 1
 	else:
-		wander_timer += randf_range(1000,5000)
+		wander_timer += randf_range(500,5000)
 		random_wander()
 		
 func Physics_Update(delta: float):
