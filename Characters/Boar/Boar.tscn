@@ -239,7 +239,7 @@
 [ext_resource type="Texture2D" uid="uid://douyapc35wqlr" path="res://Characters/Boar/Sprites/Walk/Boarwalk039.png" id="237_0emhj"]
 [ext_resource type="Texture2D" uid="uid://c5pj52l3fppii" path="res://Characters/Boar/Sprites/Walk/Boarwalk040.png" id="238_l4mv8"]
 [ext_resource type="Script" path="res://States/StateMachine.gd" id="239_rrtah"]
-[ext_resource type="Script" path="res://States/Idle.gd" id="240_dwim0"]
+[ext_resource type="Script" path="res://States/Characters/Idle.gd" id="240_dwim0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p3hae"]
 animations = [{

@@ -312,7 +312,7 @@
 [ext_resource type="Texture2D" uid="uid://fmuktc8wxpa1" path="res://Characters/Wolf/Sprites/Walk/Wolfwalk039.png" id="310_ybcxo"]
 [ext_resource type="Texture2D" uid="uid://b6gtw6dm6ydpk" path="res://Characters/Wolf/Sprites/Walk/Wolfwalk040.png" id="311_oex8l"]
 [ext_resource type="Script" path="res://States/StateMachine.gd" id="312_bwgor"]
-[ext_resource type="Script" path="res://States/Idle.gd" id="313_hpkse"]
+[ext_resource type="Script" path="res://States/Characters/Idle.gd" id="313_hpkse"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wpybi"]
 animations = [{

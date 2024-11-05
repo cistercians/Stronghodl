@@ -4,7 +4,6 @@ extends CharacterBody2D
 @onready var underworld = get_node("../Underworld")
 @onready var _animated_sprite = $AnimatedSprite2D
 @export var z = 1
-@export var home: Vector2
 @export var moving = 0
 @export var speed = 1
 @onready var direction = "D"
@@ -15,16 +14,6 @@ var path: Array[Vector2i]
 	"UR":"UL",
 	"DR":"DL"
 }
-
-func set_path(target):
-	if z == 1:
-		var new_path = overworld.astar_land.get_id_path(
-			overworld.local_to_map(global_position),
-			overworld.local_to_map(target)
-		).slice(1)
-		
-		if !new_path.is_empty():
-			path = new_path
 
 func update_direction(dir):
 	var arr = ["R","DR","D","DL","L","UL","U","UR"]
@@ -54,7 +43,7 @@ func _process(_delta):
 		else:
 			_animated_sprite.flip_h = false
 			_animated_sprite.play("Run_" + direction)
-	
+
 func _physics_process(delta):
 	if path.is_empty():
 		moving = 0
@@ -65,9 +54,3 @@ func _physics_process(delta):
 	moving = 1
 	if global_position == target_position:
 		path.pop_front()
-
-func _on_detection_body_entered(body):
-	pass # Replace with function body.
-
-func _on_detection_body_exited(body):
-	pass # Replace with function body.

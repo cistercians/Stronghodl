@@ -1267,7 +1267,7 @@
 [ext_resource type="Texture2D" uid="uid://dlnyttqvgtg0l" path="res://Characters/Villager/Male/Sprites/Walk/Villagerwalk059.png" id="1265_586dj"]
 [ext_resource type="Texture2D" uid="uid://b8ytf5n0btskk" path="res://Characters/Villager/Male/Sprites/Walk/Villagerwalk060.png" id="1266_68d38"]
 [ext_resource type="Script" path="res://States/StateMachine.gd" id="1267_nruok"]
-[ext_resource type="Script" path="res://States/Idle.gd" id="1268_83lc5"]
+[ext_resource type="Script" path="res://States/Characters/Idle.gd" id="1268_83lc5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5avm7"]
 animations = [{
@@ -5480,8 +5480,7 @@ z_index = 2
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5avm7")
-animation = &"Lumber2_UL"
-frame_progress = 0.897345
+animation = &"Walk_D"
 
 [node name="Detection" type="Area2D" parent="."]
 

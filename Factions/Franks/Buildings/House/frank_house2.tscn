@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://crxxf48l0p3k8"]
+
+[ext_resource type="Texture2D" uid="uid://cpp1okddn3rm" path="res://Factions/Franks/Buildings/House/frank_house2.png" id="1_mtt0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t17ow"]
+size = Vector2(155.5, 73)
+
+[node name="FrankHouse2" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(41, -9)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_mtt0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(23.25, 5.5)
+shape = SubResource("RectangleShape2D_t17ow")

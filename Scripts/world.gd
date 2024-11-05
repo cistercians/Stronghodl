@@ -5,8 +5,8 @@ extends Node2D
 @onready var underwater = $Underwater
 @onready var canvas_modulate = $CanvasModulate
 
-const MAP_SIZE = Vector2(256,256)
-var borders = Rect2(1,1,MAP_SIZE.x-1,MAP_SIZE.y-1)
+const MAP_SIZE = Vector2(128,128)
+var borders = Rect2(0,0,MAP_SIZE.x-1,MAP_SIZE.y-1)
 
 var land = []
 var trees = []
@@ -30,6 +30,7 @@ func _ready():
 	generate_underwater()
 	generate_flora()
 	generate_fauna()
+	spawn_factions()
 	print('test-yeet')
 	randomize()
 	BgmPlayer.play_soundtrack(BgmPlayer.THEMES.OVERWORLD_NIGHT)
@@ -204,3 +205,9 @@ func generate_fauna():
 	print('deer: ', deerCount)
 	print('wolves: ', wolfCount)
 	print('boarCount: ', boarCount)
+
+func spawn_factions():
+	print("Spawning factions")
+	var frank_scene = preload("res://Factions/Franks/Franks.tscn")
+	var franks = frank_scene.instantiate()
+	add_child(franks)

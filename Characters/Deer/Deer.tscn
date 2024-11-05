@@ -222,7 +222,7 @@
 [ext_resource type="Texture2D" uid="uid://cjo4tw7gnhekj" path="res://Characters/Deer/Sprites/Walk/Deerwalk059.png" id="219_4v8lq"]
 [ext_resource type="Texture2D" uid="uid://ce112ru1fba2i" path="res://Characters/Deer/Sprites/Walk/Deerwalk060.png" id="220_hunvj"]
 [ext_resource type="Script" path="res://States/StateMachine.gd" id="222_c43m0"]
-[ext_resource type="Script" path="res://States/Idle.gd" id="223_pj1tv"]
+[ext_resource type="Script" path="res://States/Characters/Idle.gd" id="223_pj1tv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3stdb"]
 animations = [{

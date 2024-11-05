@@ -17,7 +17,6 @@ var path: Array[Vector2i]
 }
 
 func set_path(target):
-	print("setting path")
 	if z == 1:
 		var new_path = overworld.astar_land.get_id_path(
 			overworld.local_to_map(global_position),
@@ -26,7 +25,6 @@ func set_path(target):
 		
 		if !new_path.is_empty():
 			path = new_path
-			print("got path")
 
 func update_direction(dir):
 	var arr = ["R","DR","D","DL","L","UL","U","UR"]
